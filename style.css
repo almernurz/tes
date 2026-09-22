@@ -84,3 +84,10 @@ body {
     font-size: 0.9rem;       /* teks lebih kecil di HP */
   }
 }
+  .deskripsi {
+    padding: 80px 20px 30px;
+  }
+
+  .deskripsi p {
+    font-size: 0.95rem;
+  }
