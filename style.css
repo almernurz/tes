@@ -1,1 +1,86 @@
+/* ===== RESET DASAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background: #0a0a1a;
+  color: #fff;
+}
+
+/* ===== HEADER: pembungkus banner + PP ===== */
+.header {
+  position: relative;        /* supaya PP bisa menempel di atas banner */
+  width: 100%;
+  height: 300px;             /* tinggi banner di laptop */
+  overflow: visible;         /* PP boleh keluar dari area header */
+}
+
+/* ===== BANNER ===== */
+.banner {
+  width: 100%;               /* lebar penuh mengikuti layar */
+  height: 100%;              /* tinggi penuh mengikuti header (300px) */
+  object-fit: cover;         /* gambar DIPOTONG, tidak mengecil */
+  object-position: center;   /* yang terlihat adalah bagian TENGAH gambar */
+  display: block;
+}
+
+/* ===== WRAPPER PP: pembungkus PP + teks ===== */
+.pp-wrapper {
+  position: absolute;        /* menempel di atas banner */
+  left: 40px;                /* geser ke kanan dari kiri header */
+  bottom: -60px;             /* geser ke bawah, keluar dari banner */
+  display: flex;
+  flex-direction: column;    /* PP di atas, teks di bawah */
+  align-items: center;       /* teks rata tengah di bawah PP */
+}
+
+/* ===== FOTO PROFIL ===== */
+.pp {
+  width: 120px;              /* ukuran PP */
+  height: 120px;
+  border-radius: 50%;        /* bulat */
+  border: 4px solid #00ffff; /* garis tepi */
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* ===== TEKS DI BAWAH PP ===== */
+.new-text {
+  margin-top: 10px;          /* jarak dari PP ke teks */
+  font-size: 1rem;           /* ukuran teks, ubah sesuai keinginan */
+  color: #00ffff;            /* warna teks */
+  text-align: center;        /* rata tengah */
+  letter-spacing: 1px;
+}
+
+/* ===== RESPONSIF: HP ===== */
+@media (max-width: 768px) {
+
+  .header {
+    height: 200px;           /* banner lebih pendek di HP */
+  }
+
+  .banner {
+    object-fit: cover;       /* tetap dipotong, tidak mengecil */
+    object-position: center; /* bagian tengah yang terlihat */
+  }
+
+  .pp-wrapper {
+    left: 20px;              /* geser lebih ke kiri di HP */
+    bottom: -50px;           /* tetap menempel di bawah banner */
+  }
+
+  .pp {
+    width: 90px;             /* PP lebih kecil di HP */
+    height: 90px;
+    border-width: 3px;
+  }
+
+  .new-text {
+    font-size: 0.9rem;       /* teks lebih kecil di HP */
+  }
+}
