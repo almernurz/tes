@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #161616;
+  background: #000000;
   color: #fff;
 }
 
@@ -31,8 +31,8 @@ body {
 /* ===== WRAPPER PP: pembungkus PP + teks ===== */
 .pp-wrapper {
   position: absolute;        /* menempel di atas banner */
-  left: 10px;                /* geser ke kanan dari kiri header */
-  bottom: -40px;             /* geser ke bawah, keluar dari banner */
+  left: 50px;                /* geser ke kanan dari kiri header */
+  bottom: -20px;             /* geser ke bawah, keluar dari banner */
   display: flex;
   flex-direction: column;    /* PP di atas, teks di bawah */
   align-items: center;       /* teks rata tengah di bawah PP */
@@ -45,7 +45,7 @@ body {
   border-radius: 20%;        /* bulat */
   border: 4px solid #ffffff; /* garis tepi */
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1));
 }
 
 /* ===== TEKS DI BAWAH PP ===== */
