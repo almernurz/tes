@@ -31,8 +31,8 @@ body {
 /* ===== WRAPPER PP: pembungkus PP + teks ===== */
 .pp-wrapper {
   position: absolute;        /* menempel di atas banner */
-  left: 40px;                /* geser ke kanan dari kiri header */
-  bottom: -60px;             /* geser ke bawah, keluar dari banner */
+  left: 10px;                /* geser ke kanan dari kiri header */
+  bottom: -40px;             /* geser ke bawah, keluar dari banner */
   display: flex;
   flex-direction: column;    /* PP di atas, teks di bawah */
   align-items: center;       /* teks rata tengah di bawah PP */
