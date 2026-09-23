@@ -40,12 +40,12 @@ body {
 
 /* ===== FOTO PROFIL ===== */
 .pp {
-  width: 180px;              /* ukuran PP */
-  height: 180px;
-  border-radius: 20%;        /* bulat */
-  border: 4px solid #ffffff; /* garis tepi */
+  width: 200px;              /* ukuran PP */
+  height: 200px;
+  border-radius: 10%;        /* bulat */
+  border: 2px solid #ffffff; /* garis tepi */
   object-fit: cover;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 1));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1));
 }
 
 /* ===== TEKS DI BAWAH PP ===== */
