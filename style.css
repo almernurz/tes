@@ -32,7 +32,7 @@ body {
 .pp-wrapper {
   position: absolute;        /* menempel di atas banner */
   left: 100px;                /* geser ke kanan dari kiri header */
-  bottom: 20px;             /* geser ke bawah, keluar dari banner */
+  bottom: -70px;             /* geser ke bawah, keluar dari banner */
   display: flex;
   flex-direction: column;    /* PP di atas, teks di bawah */
   align-items: left;       /* teks rata tengah di bawah PP */
