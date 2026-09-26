@@ -80,7 +80,7 @@ body {
 
 /* ===== DESKRIPSI ===== */
 .deskripsi {
-  padding: 150px 20px 40px;  /* padding atas besar karena PP menjuntai 100px */
+  padding: 50px 20px 40px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
   margin: 0 auto;
   text-align: left;
