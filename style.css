@@ -5,11 +5,15 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;        /* kunci total, halaman tidak bisa di-swipe */
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #212121;
   color: #fff;
-  overflow-x: hidden;        /* // TAMBAHAN: kunci halaman */
 }
 
 
@@ -108,6 +112,9 @@ body {
 .swipe-indicator {
   display: none;             /* default: tidak muncul */
 }
+.menu-dropdown {
+  display: none;
+}
 /*==Trapesium akhir*/
 
 /* ==PP awal*/
@@ -167,12 +174,10 @@ body {
   }
   
   .trapesium {
-    right: -60px;
-    width: 350px;
-    height: 60px;
-    flex-direction: column;  /* biar indikator ada di bawah isi */
+    right: 20px;             /* posisi trapesium di HP */
+    width: 180px;            /* lebih kecil, cuma ada tombol ☰ */
+    height: 50px;
     justify-content: center;
-    gap: 4px;
   }
 
   .trapesium-isi {
@@ -183,6 +188,63 @@ body {
 
   .menu-item {
     font-size: 0.85rem;
+  }
+
+  .trapesium-isi {
+    display: none;
+  }
+
+  /* Tampilkan tombol ☰ */
+  .menu-dropdown {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-toggle {
+    list-style: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+  }
+
+  .menu-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Dropdown muncul ke bawah */
+  .dropdown-isi {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 8px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    z-index: 20;
+  }
+
+  .dropdown-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+
+  .dropdown-item:hover {
+    background: #1a1a1a;
+    color: #00ffff;
   }
 
   /* Indikator swipe muncul di HP */
