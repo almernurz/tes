@@ -30,7 +30,7 @@
     </div>
     <!--PP akhir-->
 
-        <!--Trapesium menu awal-->
+    <!--Trapesium menu awal-->
   <div class="trapesium">
     <div class="trapesium-isi">
         <span class="menu-item">Home</span>
@@ -39,20 +39,19 @@
         <span class="menu-item">Skill</span>
         <span class="menu-item">Contact</span>
     </div>
-
-      <div class="menu-dropdown">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <div class="dropdown-isi" id="dropdownIsi">
-          <a href="#" class="dropdown-item">Home</a>
-          <a href="#" class="dropdown-item">Intro</a>
-          <a href="#" class="dropdown-item">My work</a>
-          <a href="#" class="dropdown-item">Skill</a>
-          <a href="#" class="dropdown-item">Contact</a>
-        </div>
-      </div>
-
   </div>
-    <!--Trapesium menu akhir-->
+
+  <div class="menu-dropdown">
+    <button class="menu-toggle">☰</button>
+    <div class="dropdown-isi">
+      <a href="#" class="dropdown-item">Home</a>
+      <a href="#" class="dropdown-item">Intro</a>
+      <a href="#" class="dropdown-item">My work</a>
+      <a href="#" class="dropdown-item">Skill</a>
+      <a href="#" class="dropdown-item">Contact</a>
+    </div>
+  </div>
+  <!--Trapesium menu akhir-->
 
   </header>
     <!--Header akhir-->
@@ -67,17 +66,5 @@
     </p>
   </section>
   <!--Deskripsi akhir-->
-
-    <script>
-    function toggleMenu() {
-      const menu = document.getElementById('dropdownIsi');
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'flex';
-      }
-    }
-  </script>
-  
 </body>
 </html>
