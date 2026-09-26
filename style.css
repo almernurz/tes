@@ -62,7 +62,7 @@ body {
   bottom: -30;
   right: -50px;
   width: 500px;
-  height: 80px;
+  height: 50px;
   background: #000;
   clip-path: polygon(
     0 0,
@@ -90,10 +90,6 @@ body {
   padding: 0 10px;
 }
 
-.trapesium-isi::-webkit-scrollbar {
-  display: none;
-}
-
 .menu-item {
   font-size: 0.95rem;
   color: #fff;
@@ -108,10 +104,6 @@ body {
   color: #00ffff;
 }
 
-/* ===== INDIKATOR SWIPE ===== */
-.swipe-indicator {
-  display: none;             /* default: tidak muncul */
-}
 .menu-dropdown {
   display: none;
 }
@@ -151,10 +143,10 @@ body {
 
 /* ==Deskripsi awal */
 .deskripsi {
-  padding: 20px;  /* padding atas besar karena PP menjuntai 100px */
+  padding: 50px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
   margin: 100px;
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: left;
 }
 
@@ -244,16 +236,6 @@ body {
   .dropdown-item:hover {
     background: #1a1a1a;
     color: #00ffff;
-  }
-
-  /* Indikator swipe muncul di HP */
-  .swipe-indicator {
-    display: block;
-    width: 40px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 2px;
-    margin-top: 2px;
   }
 
   .banner {
