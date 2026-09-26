@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #000000;
+  background: #2d2d2d;
   color: #fff;
 }
 
@@ -51,9 +51,9 @@ body {
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
   margin-top: 10px;          /* jarak dari PP ke teks */
-  font-size: 1rem;           /* ukuran teks, ubah sesuai keinginan */
+  font-size: 3rem;           /* ukuran teks, ubah sesuai keinginan */
   color: #ffffff;            /* warna teks */
-  text-align: center;        /* rata tengah */
+  text-align: left;        /* rata tengah */
   letter-spacing: 1px;
 }
 
