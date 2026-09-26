@@ -84,7 +84,7 @@ body {
 
 
 /*==Trapesium menu awal*/
-.trapesium-wrapper {
+.trapesium {
   position: relative;
   width: 100%;
   margin-top: 100px;         /* jarak dari header, karena PP menjuntai 100px */
