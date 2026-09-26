@@ -17,6 +17,7 @@ body {
   width: 100%;
   height: 300px;
   overflow: visible;
+  margin-bottom: 120px;
 }
 
 /* ===== BANNER WRAPPER ===== */
@@ -80,7 +81,7 @@ body {
 
 /* ===== DESKRIPSI ===== */
 .deskripsi {
-  padding: 150px 20px 40px;  /* padding atas besar karena PP menjuntai 100px */
+  padding: 20px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
   margin: 0px auto;
   text-align: left;
