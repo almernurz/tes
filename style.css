@@ -7,83 +7,118 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #4d4d4d;
+  background: #212121;
   color: #fff;
 }
 
-/* ===== HEADER: pembungkus banner + PP ===== */
+/* ===== HEADER ===== */
 .header {
-  position: relative;        /* supaya PP bisa menempel di atas banner */
+  position: relative;
   width: 100%;
-  height: 300px;             /* tinggi banner di laptop */
-  overflow: visible;         /* PP boleh keluar dari area header */
+  height: 300px;
+  overflow: visible;
+}
+
+/* ===== BANNER WRAPPER ===== */
+.banner-wrapper {
+  position: relative;        /* patokan untuk overlay */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;          /* supaya overlay tidak keluar */
 }
 
 /* ===== BANNER ===== */
 .banner {
-  width: 100%;               /* lebar penuh mengikuti layar */
-  height: 100%;              /* tinggi penuh mengikuti header (300px) */
-  object-fit: cover;         /* gambar DIPOTONG, tidak mengecil */
-  object-position: center;   /* yang terlihat adalah bagian TENGAH gambar */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
-/* ===== WRAPPER PP: pembungkus PP + teks ===== */
+/* ===== OVERLAY GRADASI DI DALAM BANNER ===== */
+.banner-overlay {
+  position: absolute;
+  inset: 0;                  /* menutupi seluruh banner */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,   /* atas gelap */
+    rgba(0, 0, 0, 0.3) 50%,  /* tengah agak terang */
+    rgba(0, 0, 0, 0.8) 100%  /* bawah gelap lagi */
+  );
+  pointer-events: none;      /* supaya tidak menghalangi klik */
+}
+
+/* ===== WRAPPER PP ===== */
 .pp-wrapper {
-  position: absolute;        /* menempel di atas banner */
-  left: 200px;                /* geser ke kanan dari kiri header */
-  bottom: -100px;             /* geser ke bawah, keluar dari banner */
+  position: absolute;
+  left: 200px;
+  bottom: -100px;
   display: flex;
-  flex-direction: column;    /* PP di atas, teks di bawah */
-  align-items: left;       /* teks rata tengah di bawah PP */
+  flex-direction: column;
+  align-items: flex-start;   /* rata kiri, bukan "left" */
 }
 
 /* ===== FOTO PROFIL ===== */
 .pp {
-  width: 200px;              /* ukuran PP */
+  width: 200px;
   height: 200px;
-  border-radius: 10%;        /* bulat */
-  border: 4px solid #ffffff; /* garis tepi */
+  border-radius: 10%;
+  border: 4px solid #ffffff;
   object-fit: cover;
-  box-shadow: 10 10 10px rgba(0, 0, 0, 1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);  /* ada px-nya */
 }
 
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
-  margin-top: 10px;          /* jarak dari PP ke teks */
-  font-size: 3rem;           /* ukuran teks, ubah sesuai keinginan */
-  color: #ffffff;            /* warna teks */
-  text-align: left;        /* rata tengah */
+  margin-top: 10px;
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: left;
   letter-spacing: 1px;
+}
+
+/* ===== DESKRIPSI ===== */
+.deskripsi {
+  padding: 150px 20px 40px;  /* padding atas besar karena PP menjuntai 100px */
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.deskripsi p {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 /* ===== RESPONSIF: HP ===== */
 @media (max-width: 768px) {
 
   .header {
-    height: 200px;           /* banner lebih pendek di HP */
+    height: 200px;
   }
 
   .banner {
-    object-fit: cover;       /* tetap dipotong, tidak mengecil */
-    object-position: center; /* bagian tengah yang terlihat */
+    object-fit: cover;
+    object-position: center;
   }
 
   .pp-wrapper {
-    left: 20px;              /* geser lebih ke kiri di HP */
-    bottom: -50px;           /* tetap menempel di bawah banner */
+    left: 20px;
+    bottom: -50px;
   }
 
   .pp {
-    width: 90px;             /* PP lebih kecil di HP */
+    width: 90px;
     height: 90px;
     border-width: 3px;
   }
 
   .new-text {
-    font-size: 0.9rem;       /* teks lebih kecil di HP */
+    font-size: 1.5rem;
   }
-}
+
   .deskripsi {
     padding: 80px 20px 30px;
   }
@@ -91,3 +126,4 @@ body {
   .deskripsi p {
     font-size: 0.95rem;
   }
+}
