@@ -150,7 +150,7 @@ body {
 
 /* ==Deskripsi awal */
 .deskripsi {
-  padding: 50px;  /* padding atas besar karena PP menjuntai 100px */
+  padding: 100px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
   margin: 100px;
   margin-top: 170px;
