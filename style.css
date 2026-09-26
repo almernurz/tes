@@ -105,22 +105,42 @@ body {
 }
 
 .menu-dropdown {
-  display: none;
+  display: none;             /* default: tidak tampil di desktop */
 }
 
+.menu-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dropdown: kotak hitam seperti popup, default tersembunyi */
 .dropdown-isi {
-  display: none;
+  display: none;             /* HANYA SATU display, ini yang bikin sembunyi */
   position: absolute;
-  top: 100%;
+  top: 100%;                 /* tepat di bawah tombol */
   right: 0;
   background: #000;
   border: 1px solid #333;
   border-radius: 8px;
   min-width: 150px;
-  display: flex;
   flex-direction: column;
   padding: 8px 0;
-  z-index: 20;
+  z-index: 100;              /* di atas semua elemen */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* Munculkan dropdown saat tombol diklik / disentuh */
+.menu-dropdown:focus-within .dropdown-isi,
+.menu-dropdown:hover .dropdown-isi {
+  display: flex;
 }
 
 .dropdown-item {
@@ -223,26 +243,12 @@ body {
   /* Tampilkan tombol ☰ */
   .menu-dropdown {
     display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .menu-toggle {
-    list-style: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    user-select: none;
-  }
-
-  .menu-toggle::-webkit-details-marker {
-    display: none;
+    position: absolute;
+    bottom: -30px;            /* sejajar dengan posisi trapesium */
+    right: 0;
+    width: 180px;             /* sama dengan lebar trapesium di HP */
+    height: 50px;
+    z-index: 50;
   }
 
   .banner {
