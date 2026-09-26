@@ -59,8 +59,8 @@ body {
 /*==Trapesium awal*/
 .trapesium {
   position: absolute;
-  bottom: 0;
-  right: -80px;
+  bottom: -30;
+  right: -50px;
   width: 500px;
   height: 80px;
   background: #000;
@@ -80,8 +80,8 @@ body {
 /* ===== ISI TRAPESIUM: yang bisa di-swipe ===== */
 .trapesium-isi {
   display: flex;
-  gap: 25px;
-  align-items: center;
+  gap: 15px;
+  align-items: left;
   max-width: 80%;            /* biar tidak mentok pinggir trapesium */
   overflow-x: auto;          /* // DI SINI yang bikin swipe */
   white-space: nowrap;
@@ -140,7 +140,7 @@ body {
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
   margin-top: 10px;
-  margin-left: -100px;
+  margin-left: -150px;
   font-size: 3rem;
   color: #ffffff;
   text-align: left;
@@ -155,7 +155,7 @@ body {
   padding: 20px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
   margin: 100px;
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: left;
 }
 
