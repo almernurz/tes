@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   background: #212121;
   color: #fff;
+  overflow-x: hidden;        /* // TAMBAHAN: kunci halaman */
 }
 
 
@@ -53,38 +54,40 @@ body {
 
 /*==Trapesium awal*/
 .trapesium {
-  position: absolute;        /* menempel di header */
-  bottom: 0;                 /* nempel di bawah banner */
-  right: -200px;              /* geser ke kanan, sebagian keluar layar */
-  width: 600px;              /* lebar trapesium */
-  height: 60px;              /* tinggi trapesium */
-  background: #000;          /* warna hitam */
+  position: absolute;
+  bottom: 0;
+  right: -80px;
+  width: 500px;
+  height: 80px;
+  background: #000;
   clip-path: polygon(
-    0 0,                     /* kiri atas */
-    100% 0,                  /* kanan atas */
-    85% 100%,                /* kanan bawah */
-    15% 100%                 /* kiri bawah */
+    0 0,
+    100% 0,
+    85% 100%,
+    15% 100%
   );
-  z-index: 0;                /* di atas banner */
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 30px;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  /* // HAPUS overflow-x, white-space, scrollbar dari sini */
 }
 
-.trapesium::-webkit-scrollbar {
-  display: none;
-}
-
-/* Isi trapesium */
+/* ===== ISI TRAPESIUM: yang bisa di-swipe ===== */
 .trapesium-isi {
   display: flex;
   gap: 25px;
   align-items: center;
+  max-width: 80%;            /* biar tidak mentok pinggir trapesium */
+  overflow-x: auto;          /* // DI SINI yang bikin swipe */
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 10px;
+}
+
+.trapesium-isi::-webkit-scrollbar {
+  display: none;
 }
 
 .menu-item {
@@ -100,9 +103,12 @@ body {
 .menu-item:hover {
   color: #00ffff;
 }
-/*==Trapesium akhir*/
-/*==Header akhir */
 
+/* ===== INDIKATOR SWIPE ===== */
+.swipe-indicator {
+  display: none;             /* default: tidak muncul */
+}
+/*==Trapesium akhir*/
 
 /* ==PP awal*/
 .pp-wrapper {
@@ -134,6 +140,7 @@ body {
   letter-spacing: 1px;
 }
 /* ==PP akhir*/
+/*==Header akhir */
 
 
 /* ==Deskripsi awal */
@@ -141,6 +148,7 @@ body {
   padding: 20px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
   margin: 100px;
+  margin-top: 20px;
   text-align: left;
 }
 
@@ -156,6 +164,35 @@ body {
 
   .header {
     height: 200px;
+  }
+  
+  .trapesium {
+    right: -60px;
+    width: 350px;
+    height: 60px;
+    flex-direction: column;  /* biar indikator ada di bawah isi */
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .trapesium-isi {
+    max-width: 85%;
+    gap: 20px;
+    padding: 0 8px;
+  }
+
+  .menu-item {
+    font-size: 0.85rem;
+  }
+
+  /* Indikator swipe muncul di HP */
+  .swipe-indicator {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    margin-top: 2px;
   }
 
   .banner {
