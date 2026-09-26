@@ -252,17 +252,17 @@ body {
 
   .pp-wrapper {
     left: 20px;
-    bottom: -50px;
+    bottom: -250px;
   }
 
   .pp {
     width: 90px;
-    height: 90px;
+    height: 140px;
     border-width: 3px;
   }
 
   .new-text {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .deskripsi {
