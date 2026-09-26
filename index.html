@@ -40,16 +40,16 @@
         <span class="menu-item">Contact</span>
     </div>
 
-      <details class="menu-dropdown">
-        <summary class="menu-toggle">☰</summary>
-        <div class="dropdown-isi">
+      <div class="menu-dropdown">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="dropdown-isi" id="dropdownIsi">
           <a href="#" class="dropdown-item">Home</a>
           <a href="#" class="dropdown-item">Intro</a>
           <a href="#" class="dropdown-item">My work</a>
           <a href="#" class="dropdown-item">Skill</a>
           <a href="#" class="dropdown-item">Contact</a>
         </div>
-      </details>
+      </div>
 
   </div>
     <!--Trapesium menu akhir-->
@@ -67,5 +67,17 @@
     </p>
   </section>
   <!--Deskripsi akhir-->
+
+    <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownIsi');
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
+  </script>
+  
 </body>
 </html>
