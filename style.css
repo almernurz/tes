@@ -165,14 +165,14 @@ body {
 /* ==Deskripsi akhir */
 
 /* ===== RESPONSIF: HP ===== */
-@media (max-width: 768px) {
+@media (max-width: 923px) {
 
   .header {
     height: 200px;
   }
   
   .trapesium {
-    right: 20px;             /* posisi trapesium di HP */
+    right: 0px;             /* posisi trapesium di HP */
     width: 180px;            /* lebih kecil, cuma ada tombol ☰ */
     height: 50px;
     justify-content: center;
@@ -256,8 +256,8 @@ body {
   }
 
   .pp {
-    width: 90px;
-    height: 113px;
+    width: 120px;
+    height: 150px;
     border-width: 3px;
   }
 
@@ -271,7 +271,7 @@ body {
 
 
   .deskripsi {
-    padding: 80px 20px 30px;
+    padding: 80px 10px 10px;
   }
 
   .deskripsi p {
