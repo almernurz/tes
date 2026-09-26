@@ -112,7 +112,7 @@ body {
 /* ==PP awal*/
 .pp-wrapper {
   position: absolute;
-  left: 200px;
+  left: 170px;
   bottom: -170px;
   display: flex;
   flex-direction: column;
@@ -153,7 +153,7 @@ body {
 .deskripsi p {
   color: #ccc;
   line-height: 1.8;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 /* ==Deskripsi akhir */
 
