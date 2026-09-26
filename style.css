@@ -262,8 +262,13 @@ body {
   }
 
   .new-text {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
+
+  .new-text1 {
+    font-size: 2rem;
+  }
+
 
   .deskripsi {
     padding: 80px 20px 30px;
