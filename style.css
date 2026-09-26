@@ -257,12 +257,12 @@ body {
 
   .pp {
     width: 90px;
-    height: 140px;
+    height: 113px;
     border-width: 3px;
   }
 
   .new-text {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .deskripsi {
