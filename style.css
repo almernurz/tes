@@ -132,6 +132,13 @@ body {
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
   margin-top: 10px;
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.new-text1 {
+  margin-top: 20px;
   font-size: 3rem;
   color: #ffffff;
   text-align: left;
