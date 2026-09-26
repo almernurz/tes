@@ -51,7 +51,60 @@ body {
   pointer-events: none;      /* supaya tidak menghalangi klik */
 }
 
-/* ===== WRAPPER PP ===== */
+/*==Trapesium awal*/
+.trapesium {
+  position: absolute;        /* menempel di header */
+  bottom: 0;                 /* nempel di bawah banner */
+  right: -80px;              /* geser ke kanan, sebagian keluar layar */
+  width: 500px;              /* lebar trapesium */
+  height: 80px;              /* tinggi trapesium */
+  background: #000;          /* warna hitam */
+  clip-path: polygon(
+    0 0,                     /* kiri atas */
+    100% 0,                  /* kanan atas */
+    85% 100%,                /* kanan bawah */
+    15% 100%                 /* kiri bawah */
+  );
+  z-index: 5;                /* di atas banner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.trapesium::-webkit-scrollbar {
+  display: none;
+}
+
+/* Isi trapesium */
+.trapesium-isi {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu-item {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.3s;
+  flex-shrink: 0;
+}
+
+.menu-item:hover {
+  color: #00ffff;
+}
+/*==Trapesium akhir*/
+/*==Header akhir */
+
+
+/* ==PP awal*/
 .pp-wrapper {
   position: absolute;
   left: 200px;
@@ -80,67 +133,7 @@ body {
   text-align: left;
   letter-spacing: 1px;
 }
-/*==Header akhir */
-
-
-/*==Trapesium menu awal*/
-.trapesium {
-  position: relative;
-  width: 100%;
-  margin-top: 100px;         /* jarak dari header, karena PP menjuntai 100px */
-  z-index: 10;
-  padding: 40px 0 20px;
-}
-
-.trapesium-bentuk {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    85% 100%,
-    15% 100%
-  );
-  z-index: -1;
-}
-
-.trapesium-isi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.trapesium-isi::-webkit-scrollbar {
-  display: none;
-}
-
-.menu-item {
-  font-size: 1.1rem;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: color 0.3s;
-  flex-shrink: 0;
-}
-
-.menu-item:hover {
-  color: #00ffff;
-}
-/*==Trapesium menu akhir*/
+/* ==PP akhir*/
 
 
 /* ==Deskripsi awal */
