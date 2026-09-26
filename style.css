@@ -244,7 +244,7 @@ body {
   .menu-dropdown {
     display: block;
     position: absolute;
-    bottom: -30px;            /* sejajar dengan posisi trapesium */
+    bottom: -50px;            /* sejajar dengan posisi trapesium */
     right: 0;
     width: 180px;             /* sama dengan lebar trapesium di HP */
     height: 50px;
