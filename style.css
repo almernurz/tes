@@ -55,9 +55,9 @@ body {
 .trapesium {
   position: absolute;        /* menempel di header */
   bottom: 0;                 /* nempel di bawah banner */
-  right: -80px;              /* geser ke kanan, sebagian keluar layar */
+  right: -200px;              /* geser ke kanan, sebagian keluar layar */
   width: 500px;              /* lebar trapesium */
-  height: 80px;              /* tinggi trapesium */
+  height: 50px;              /* tinggi trapesium */
   background: #000;          /* warna hitam */
   clip-path: polygon(
     0 0,                     /* kiri atas */
@@ -65,7 +65,7 @@ body {
     85% 100%,                /* kanan bawah */
     15% 100%                 /* kiri bawah */
   );
-  z-index: 5;                /* di atas banner */
+  z-index: 0;                /* di atas banner */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,7 +108,7 @@ body {
 .pp-wrapper {
   position: absolute;
   left: 200px;
-  bottom: -170px;
+  bottom: -10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;   /* rata kiri, bukan "left" */
