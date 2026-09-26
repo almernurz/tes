@@ -75,6 +75,7 @@ body {
   margin-top: 10px;
   font-size: 3rem;
   color: #ffffff;
+  margin: 100px;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -83,7 +84,7 @@ body {
 .deskripsi {
   padding: 20px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
-  margin: 0px;
+  margin: 100px;
   text-align: left;
 }
 
