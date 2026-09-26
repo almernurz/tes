@@ -42,9 +42,9 @@ body {
   inset: 0;                  /* menutupi seluruh banner */
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.8) 0%,   /* atas gelap */
-    rgba(0, 0, 0, 0.3) 50%,  /* tengah agak terang */
-    rgba(0, 0, 0, 0.8) 100%  /* bawah gelap lagi */
+    rgba(0, 0, 0, 0.75) 0%,   /* atas gelap */
+    rgba(0, 0, 0, 0.2) 50%,  /* tengah agak terang */
+    rgba(0, 0, 0, 0.75) 100%  /* bawah gelap lagi */
   );
   pointer-events: none;      /* supaya tidak menghalangi klik */
 }
@@ -83,7 +83,7 @@ body {
   padding: 150px 20px 40px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .deskripsi p {
