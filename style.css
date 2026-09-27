@@ -1,3 +1,4 @@
+ /* ==Page 1 awal */
  /*==Halaman*/
 * {
   margin: 0;
@@ -211,10 +212,59 @@ body {
   font-size: 1rem;
 }
 /* ==Deskripsi akhir */
+/* ==Page 1 akhir */
+
+/* ==Page 2 awal */
+.halaman2 {
+  position: relative;
+  width: 100%;
+  background: #1a1a1a;        /* warna lembaran baru, beda dari body (#212121) */
+  padding: 80px 20px 60px;
+  margin-top: 0;
+}
+
+/* Pemisah bayangan: gelap di atas, pudar ke bawah */
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;               /* tinggi bayangan, ubah sesuai selera */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,    /* paling atas: gelap pekat */
+    rgba(0, 0, 0, 0.4) 50%,   /* tengah: agak pudar */
+    rgba(0, 0, 0, 0) 100%     /* bawah: transparan total */
+  );
+  pointer-events: none;       /* tidak menghalangi klik */
+  z-index: 1;
+}
+
+/* Isi lembaran */
+.isi {
+  position: relative;
+  z-index: 2;                 /* di atas bayangan */
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.isi h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.isi p2 {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+/* ==Page 2 awal */
 
 /* ===== RESPONSIF: HP ===== */
 @media (max-width: 923px) {
-
+/* ==Page 1 awal */
   .header {
     height: 200px;
   }
@@ -284,3 +334,21 @@ body {
     font-size: 0.95rem;
   }
 }
+/* ==Page 1 akhir */
+
+/* ==Page 2 awal */
+  .halaman2 {
+    padding: 60px 15px 40px;
+  }
+
+  .border {
+    height: 40px;             /* bayangan lebih pendek di HP */
+  }
+
+  .isi h2 {
+    font-size: 1.5rem;
+  }
+
+  .isi p2 {
+    font-size: 0.95rem;
+  }
