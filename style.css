@@ -162,7 +162,7 @@ body {
 .pp-wrapper {
   position: absolute;
   left: 170px;
-  bottom: -480px;
+  bottom: -510px;
   display: flex;
   flex-direction: row;       /* // BERUBAH: dari column jadi row */
   align-items: center;       /* // teks sejajar vertikal dengan PP */
@@ -210,10 +210,11 @@ body {
 
 /* ==Deskripsi awal */
 .deskripsi {
-  padding: 100px;  /* padding atas besar karena PP menjuntai 100px */
-  max-width: 900px;
+  padding-top: 150px;  /* padding atas besar karena PP menjuntai 100px */
+  padding-left: 0;
+  max-width: 1000px;
   margin: 170px;
-  margin-top: 400px;
+  margin-top: 4500px;
   text-align: left;
 }
 
