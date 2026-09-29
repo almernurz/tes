@@ -348,14 +348,11 @@ body {
 
 
   .deskripsi {
-    margin-top: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 100;
+    padding: 80px 10px 10px;
   }
 
   .deskripsi p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 /* ==Page 1 akhir */
