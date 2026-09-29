@@ -178,8 +178,8 @@ body {
 
 /* ===== FOTO PROFIL ===== */
 .pp {
-  width: 200px;
-  height: 250px;
+  width: 400px;
+  height: 500px;
   border-radius: 10%;
   border: 4px solid #ffffff;
   object-fit: cover;
@@ -189,7 +189,7 @@ body {
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
   margin-top: 0;             /* // tidak perlu margin atas lagi */
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ffffff;
   text-align: left;
   letter-spacing: 1px;
@@ -197,30 +197,21 @@ body {
 
 .new-text1 {
   margin-top: 10px;          /* // jarak antar teks saja */
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.new-text2 {
+  margin-top: 400px;          /* // jarak antar teks saja */
+  font-size: 2rem;
   color: #ffffff;
   text-align: left;
   letter-spacing: 1px;
 }
 /* ==PP akhir*/
 /*==Header akhir */
-
-
-/* ==Deskripsi awal */
-.deskripsi {
-  padding: 100px;  /* padding atas besar karena PP menjuntai 100px */
-  max-width: 700px;
-  margin: 200px;
-  margin-top: 200px;
-  text-align: left;
-}
-
-.deskripsi p {
-  color: #ccc;
-  line-height: 1.8;
-  font-size: 1rem;
-}
-/* ==Deskripsi akhir */
 /* ==Page 1 akhir */
 
 /* ==Page 2 awal */
@@ -342,14 +333,10 @@ body {
     font-size: 2rem;
   }
 
-
-  .deskripsi {
-    padding: 80px 10px 10px;
+  .new-text2 {
+    font-size: 0.8rem;
   }
 
-  .deskripsi p {
-    font-size: 0.95rem;
-  }
 }
 /* ==Page 1 akhir */
 
