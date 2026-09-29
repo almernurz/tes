@@ -321,7 +321,7 @@ body {
 
   .pp-wrapper {
     left: 20px;
-    bottom: -200px;
+    bottom: -250px;
     flex-direction: row;     /* // tetap row di HP */
     gap: 10px;
   }
@@ -350,6 +350,7 @@ body {
   .deskripsi {
     margin-top: 100px;
     margin-left: 20px;
+    margin-right: 20px;
   }
 
   .deskripsi p {
