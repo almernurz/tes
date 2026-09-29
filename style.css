@@ -164,8 +164,16 @@ body {
   left: 170px;
   bottom: -250px;
   display: flex;
+  flex-direction: row;       /* // BERUBAH: dari column jadi row */
+  align-items: center;       /* // teks sejajar vertikal dengan PP */
+  gap: 20px;                 /* // jarak antara PP dan teks */
+}
+
+/* // TAMBAHAN: pembungkus teks, tersusun ke bawah */
+.teks-wrapper {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;   /* rata kiri, bukan "left" */
+  align-items: flex-start;
 }
 
 /* ===== FOTO PROFIL ===== */
@@ -180,14 +188,15 @@ body {
 
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
-  margin-left: 230px;
+  margin-top: 0;             /* // tidak perlu margin atas lagi */
   font-size: 2rem;
   color: #ffffff;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .new-text1 {
-  margin-left: 230px;
+  margin-top: 10px;          /* // jarak antar teks saja */
   font-size: 3rem;
   color: #ffffff;
   text-align: left;
@@ -309,6 +318,14 @@ body {
   .pp-wrapper {
     left: 20px;
     bottom: -200px;
+    flex-direction: row;     /* // tetap row di HP */
+    gap: 10px;
+  }
+
+  .teks-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .pp {
