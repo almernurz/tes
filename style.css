@@ -276,7 +276,7 @@ body {
 /* ==Page 2 awal */
 
 /* ===== RESPONSIF: HP ===== */
-@media (max-width: 1024px) {
+@media (max-width: 560px) {
 /* ==Page 1 awal */
   .header {
     height: 200px;
@@ -333,8 +333,8 @@ body {
   }
 
   .pp {
-    width: 120px;
-    height: 150px;
+    width: 150px;
+    height: 188px;
     border-width: 3px;
   }
 
@@ -348,11 +348,12 @@ body {
 
 
   .deskripsi {
-    padding: 80px 10px 10px;
+    margin-top: 100px;
+    margin-left: 20px;
   }
 
   .deskripsi p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
 /* ==Page 1 akhir */
