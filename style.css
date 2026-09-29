@@ -162,7 +162,7 @@ body {
 .pp-wrapper {
   position: absolute;
   left: 170px;
-  bottom: -250px;
+  bottom: -450px;
   display: flex;
   flex-direction: row;       /* // BERUBAH: dari column jadi row */
   align-items: center;       /* // teks sejajar vertikal dengan PP */
@@ -180,7 +180,7 @@ body {
 .pp {
   width: 400px;
   height: 500px;
-  border-radius: 10%;
+  border-radius: 5%;
   border: 4px solid #ffffff;
   object-fit: cover;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);  /* ada px-nya */
@@ -210,15 +210,15 @@ body {
 .deskripsi {
   padding: 100px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
-  margin: 200px;
-  margin-top: 200px;
+  margin: 500px;
+  margin-top: 400px;
   text-align: left;
 }
 
 .deskripsi p {
   color: #ccc;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 /* ==Deskripsi akhir */
 /* ==Page 1 akhir */
