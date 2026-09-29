@@ -162,7 +162,7 @@ body {
 .pp-wrapper {
   position: absolute;
   left: 170px;
-  bottom: -450px;
+  bottom: -480px;
   display: flex;
   flex-direction: row;       /* // BERUBAH: dari column jadi row */
   align-items: center;       /* // teks sejajar vertikal dengan PP */
@@ -210,7 +210,7 @@ body {
 .deskripsi {
   padding: 100px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
-  margin: 500px;
+  margin: 200px;
   margin-top: 400px;
   text-align: left;
 }
@@ -272,7 +272,7 @@ body {
 /* ==Page 2 awal */
 
 /* ===== RESPONSIF: HP ===== */
-@media (max-width: 923px) {
+@media (max-width: 1024px) {
 /* ==Page 1 awal */
   .header {
     height: 200px;
