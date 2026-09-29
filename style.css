@@ -81,7 +81,7 @@ body {
 /* ===== ISI TRAPESIUM: yang bisa di-swipe ===== */
 .trapesium-isi {
   display: flex;
-  gap: 100px;
+  gap: 70px;
   align-items: left;
   max-width: 100%;            /* biar tidak mentok pinggir trapesium */
   overflow-x: auto;          /* // DI SINI yang bikin swipe */
@@ -92,7 +92,7 @@ body {
 }
 
 .menu-item {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
