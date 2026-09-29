@@ -189,6 +189,7 @@ body {
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
   margin-top: 0;             /* // tidak perlu margin atas lagi */
+  margin-left: 20px;
   font-size: 2.5rem;
   color: #ffffff;
   text-align: left;
@@ -197,6 +198,7 @@ body {
 
 .new-text1 {
   margin-top: 10px;          /* // jarak antar teks saja */
+  margin-left: 20px;
   font-size: 3.5rem;
   color: #ffffff;
   text-align: left;
@@ -209,15 +211,15 @@ body {
 /* ==Deskripsi awal */
 .deskripsi {
   padding: 100px;  /* padding atas besar karena PP menjuntai 100px */
-  max-width: 700px;
-  margin: 200px;
+  max-width: 900px;
+  margin: 170px;
   margin-top: 400px;
   text-align: left;
 }
 
 .deskripsi p {
   color: #ccc;
-  line-height: 1.8;
+  line-height: 1.5;
   font-size: 2rem;
 }
 /* ==Deskripsi akhir */
