@@ -180,14 +180,14 @@ body {
 
 /* ===== TEKS DI BAWAH PP ===== */
 .new-text {
-  margin-top: 10px;
+  margin-left: 30px;
   font-size: 2rem;
   color: #ffffff;
   text-align: left;
   letter-spacing: 1px;
 }
 .new-text1 {
-  margin-top: 17px;
+  margin-left: 30px;
   font-size: 3rem;
   color: #ffffff;
   text-align: left;
@@ -201,7 +201,7 @@ body {
 .deskripsi {
   padding: 100px;  /* padding atas besar karena PP menjuntai 100px */
   max-width: 700px;
-  margin: 75px;
+  margin: 200px;
   margin-top: 200px;
   text-align: left;
 }
