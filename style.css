@@ -348,7 +348,8 @@ body {
 
 
   .deskripsi {
-    padding: 80px 10px 10px;
+    margin: auto;
+    padding: 80px 160px 160px;
   }
 
   .deskripsi p {
