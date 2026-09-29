@@ -349,7 +349,7 @@ body {
 
   .deskripsi {
     padding: 30px 20px 40px;   /* atas 30px, kiri-kanan 20px, bawah 40px */
-    margin: 100;                 /* // timpa margin 80px dari aturan utama */
+    margin-top: 100;                 /* // timpa margin 80px dari aturan utama */
     max-width: 100%;           /* // biar lebar penuh di HP */
     text-align: left;
   }
