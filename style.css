@@ -81,6 +81,7 @@ body {
 /* ===== ISI TRAPESIUM: yang bisa di-swipe ===== */
 .trapesium-isi {
   display: flex;
+  margin-left: 30px;
   gap: 70px;
   align-items: left;
   max-width: 100%;            /* biar tidak mentok pinggir trapesium */
@@ -162,7 +163,7 @@ body {
 .pp-wrapper {
   position: absolute;
   left: 170px;
-  bottom: -510px;
+  bottom: -590px;
   display: flex;
   flex-direction: row;       /* // BERUBAH: dari column jadi row */
   align-items: center;       /* // teks sejajar vertikal dengan PP */
