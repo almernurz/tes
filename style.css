@@ -256,7 +256,7 @@ body {
   position: relative;
   z-index: 2;
   max-width: 100%;           
-  margin-left: 170px;           
+  margin-left: 0;           
   text-align: left;
 }
 
@@ -267,7 +267,7 @@ body {
   line-height: 1;            /* // tambahkan ini */
 }
 
-.isi p {
+.isi p2 {
   color: #ccc;
   font-size: 2rem;
 }
@@ -373,4 +373,5 @@ body {
   .isi p2 {
     font-size: 0.95rem;
   }
+
 }
