@@ -255,13 +255,13 @@ body {
 .isi {
   position: relative;
   z-index: 2;
-  max-width: 100%;           /* // ganti dari 700px */
-  margin-left: 0;            /* // hapus margin kiri */
+  max-width: 100%;           
+  margin-left: 170px;           
   text-align: left;
 }
 
 .isi h2 {
-  font-size: 10rem;
+  font-size: 3rem;
   color: #ffffff;
   margin-bottom: 100px;
   line-height: 1;            /* // tambahkan ini */
@@ -269,7 +269,7 @@ body {
 
 .isi p {
   color: #ccc;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 /* ==Page 2 akhir */
 
@@ -355,10 +355,9 @@ body {
   .deskripsi p {
     font-size: 1rem;
   }
-}
-/* ==Page 1 akhir */
+  /* ==Page 1 akhir */
 
-/* ==Page 2 awal */
+  /* ==Page 2 awal */
   .halaman2 {
     padding: 60px 15px 40px;
   }
@@ -374,3 +373,4 @@ body {
   .isi p2 {
     font-size: 0.95rem;
   }
+}
