@@ -273,8 +273,8 @@ body {
 
 .kotak {
   width: 100%;
-  background: #282828;
-  border: 5px solid #707070;
+  background: #222222;
+  border: 2px solid #4d4d4d;
   border-radius: 12px;
   padding: 40px 20px 40px 20px;
   margin-top: 40px;
@@ -292,7 +292,8 @@ body {
   height: 220px;
   object-fit: contain;
   border-radius: 10px;
-  flex-shrink: 0;        
+  flex-shrink: 0;  
+         
 }
 
 .teks {
