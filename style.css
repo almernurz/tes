@@ -272,11 +272,11 @@ body {
 /* ==kotak awal */
 .kotak {
   width: 100%;
-  background: #414141;
-  border: 1px solid #646464;
+  background: #3c3c3c;
+  border: 1px solid #707070;
   border-radius: 12px;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 40px;
   color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 
@@ -288,7 +288,7 @@ body {
 .gmb3D {
   width: 200px;
   height: 200px;
-  object-fit: flex;
+  object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;              
 }
