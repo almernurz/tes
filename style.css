@@ -261,16 +261,43 @@ body {
 }
 
 .isi h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffffff;
-  margin-bottom: 100px;
-  line-height: 1;            /* // tambahkan ini */
+  margin-bottom: 750px;
+  line-height: 1;            
+  font-style: italic;
+  letter-spacing: 3px;
 }
 
-.isi p2 {
-  color: #ccc;
-  font-size: 2rem;
+/* ==kotak awal */
+.kotak {
+  width: 100%;
+  background: #414141;
+  border: 1px solid #646464;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 50px;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+  display: flex;               
+  align-items: center;         
+  gap: 30px;                  
 }
+
+.gmb3D {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;              
+}
+.teks {
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+/* ==kotak akhir */
 /* ==Page 2 akhir */
 
 /* ===== RESPONSIF: HP ===== */
@@ -370,8 +397,21 @@ body {
     font-size: 1.5rem;
   }
 
-  .isi p2 {
-    font-size: 0.95rem;
+  .kotak {
+    flex-direction: row;       /* // tetap row di HP */
+    padding: 20px;
+    gap: 15px;
   }
+
+  .gmb3D {
+    width: 80px;
+    height: 80px;
+  }
+
+  .teks{
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
 
 }
