@@ -299,9 +299,9 @@ body {
 
 .teks-wrapper-kotak {
   flex: 1;                    
-  max-width: 30%;              
+  max-width: 70%;              
   border-radius: 8px;
-  padding:0px;
+  padding:20px;
   display: flex;
   flex-direction: column;
   justify-content: center;    
@@ -309,7 +309,7 @@ body {
 }
 
 .text {
-  font-size: 1.5rem;
+  font-size: rem;
   color: #ffffff;
   margin-bottom: 15px;
   word-wrap: break-word;      
