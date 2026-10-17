@@ -299,19 +299,18 @@ body {
 
 .teks-wrapper-kotak {
   flex: 1;                    
-  max-width: 50%;              
-  border: 2px solid #00ffff; 
+  max-width: 30%;              
   border-radius: 8px;
-  padding: 20px;
+  padding:0px;
   display: flex;
   flex-direction: column;
   justify-content: center;    
   overflow: hidden;          
 }
 
-.teks {
+.text {
   font-size: 2rem;
-  color: #00ffff;
+  color: #ffffff;
   margin-bottom: 15px;
   word-wrap: break-word;      
 }
