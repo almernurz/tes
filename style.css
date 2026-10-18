@@ -334,6 +334,75 @@ body {
   pointer-events: none;
   border-radius: 8px;
 }
+
+/* ==Galeri 1 awal */
+
+.galeri-wrapper1 {
+  position: absolute;
+  left: 30px;                  /* sejajar padding kiri kotak */
+  right: 30px;                 /* sejajar padding kanan kotak */
+  bottom: 350px;               /* posisi di tengah ruang kosong bawah */
+  height: 300px;               /* tinggi wadah, sesuaikan dengan bayangan */
+  background: transparent;     /* wadah transparan */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;            /* gambar yang keluar disembunyikan */
+  z-index: 10;                 /* di atas bayangan */
+  padding: 0 50px;             /* ruang untuk tombol kiri-kanan */
+}
+
+/* ===== TRACK GAMBAR: yang digeser ===== */
+.galeri-track1 {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+/* ===== GAMBAR DI DALAM GALERI ===== */
+.galeri-img1 {
+  width: 200px;                /* ukuran gambar, bisa diatur */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;              /* gambar tidak mengecil */
+}
+
+/* ===== TOMBOL KIRI-KANAN ===== */
+.galeri-btn1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.galeri-btn1:hover {
+  background: rgba(0, 255, 255, 0.7);
+  color: #000;
+}
+
+.galeri-btn-kiri1 {
+  left: 10px;
+}
+
+.galeri-btn-kanan1 {
+  right: 10px;
+}
+/* ==Galeri 1 akhir */
 /* ==kotak 1 */
 /* ==kotak 2 */
 .kotak2 {
