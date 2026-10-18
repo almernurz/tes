@@ -125,7 +125,7 @@
 
 
 </body>
-    <script>
+      <script>
     let indeksAktif1 = 0;
     const gambar1 = document.querySelectorAll('.galeri-img1');
     const track1 = document.getElementById('galeriTrack1');
@@ -133,7 +133,7 @@
     const kotak1 = document.querySelector('.kotak1');
 
     function perbaruiGaleri1() {
-      
+
       gambar1.forEach((img, i) => {
         img.classList.toggle('aktif', i === indeksAktif1);
       });
@@ -163,5 +163,15 @@
     }
 
     window.addEventListener('load', perbaruiGaleri1);
+
+    if (window.ResizeObserver) {
+      const observer = new ResizeObserver(() => {
+        perbaruiGaleri1();
+      });
+      observer.observe(kotak1);
+    } else {
+      // Fallback untuk browser lama
+      window.addEventListener('resize', perbaruiGaleri1);
+    }
   </script>
 </html>
