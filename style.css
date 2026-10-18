@@ -288,7 +288,7 @@ body {
   overflow: hidden;          
 }
 
-.gmb3D {
+.gmb3D1 {
   width: 300px;
   height: 220px;
   object-fit: contain;
@@ -297,7 +297,7 @@ body {
 }
 
 
-.teks-wrapper-kotak {
+.teks-wrapper-kotak1 {
   flex: 1;                    
   max-width: 100%;              
   border-radius: 8px;
@@ -308,18 +308,18 @@ body {
   overflow: hidden;          
 }
 
-.text {
+.text1 {
   font-size: 2rem;
   color: #ffffff;
   margin-bottom: 15px;
   word-wrap: break-word;      
 }
 /* // TAMBAHAN: bayangan memudar di bawah kotak */
-.bayangan {
+.bayangan1 {
   position: absolute;
   left: 0px;                  /* sejajar dengan padding kiri kotak */
   right: 0px;                 /* sejajar dengan padding kanan kotak */
-  bottom: 100px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
+  bottom: 90px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
   height: 600px;               /* tinggi bayangan */
   background: linear-gradient(
     to bottom,
