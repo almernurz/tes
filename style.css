@@ -323,13 +323,13 @@ body {
   height: 620px;               /* tinggi bayangan */
   background: linear-gradient(
     to bottom,
-    rgba(17, 17, 17, 0) 0%,       /* atas transparan */
+    rgba(17, 17, 17, 1) 0%,       /* atas transparan */
     rgba(17, 17, 17, 0.7) 15%, 
     rgba(12, 12, 12, 1) 35%, 
     rgba(12, 12, 12, 1) 50%,  
     rgba(12, 12, 12, 1) 65%,   /* tengah gelap pekat */
     rgba(17, 17, 17, 0.7) 85%, 
-    rgba(17, 17, 17, 0) 100%     /* bawah transparan */
+    rgba(17, 17, 17, 1) 100%     /* bawah transparan */
   );
   pointer-events: none;
   border-radius: 8px;
@@ -354,7 +354,7 @@ body {
 .galeri-track1 {
   position: relative; 
   display: flex;
-  gap: 20px;                   /* jarak antar gambar, bisa diatur */
+  gap: 10px;                   /* jarak antar gambar, bisa diatur */
   transition: transform 0.5s linear;  /* animasi smooth dan linear */
   will-change: transform;
   align-items: center;         /* gambar sejajar tengah vertikal */
