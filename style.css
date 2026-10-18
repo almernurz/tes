@@ -354,7 +354,7 @@ body {
 .galeri-track1 {
   position: relative; 
   display: flex;
-  gap: 10px;                   /* jarak antar gambar, bisa diatur */
+  gap: 5px;                   /* jarak antar gambar, bisa diatur */
   transition: transform 0.5s linear;  /* animasi smooth dan linear */
   will-change: transform;
   align-items: center;         /* gambar sejajar tengah vertikal */
