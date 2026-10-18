@@ -351,21 +351,33 @@ body {
   padding: 0 50px;             /* ruang untuk tombol kiri-kanan */
 }
 
-/* ===== TRACK GAMBAR: yang digeser ===== */
+/* ===== TRACK GAMBAR ===== */
 .galeri-track1 {
   display: flex;
-  gap: 20px;
-  transition: transform 0.4s ease;
+  gap: 20px;                   /* jarak antar gambar, bisa diatur */
+  transition: transform 0.5s linear;  /* animasi smooth dan linear */
   will-change: transform;
+  align-items: center;         /* gambar sejajar tengah vertikal */
 }
 
 /* ===== GAMBAR DI DALAM GALERI ===== */
 .galeri-img1 {
-  width: 200px;                /* ukuran gambar, bisa diatur */
+  width: 200px;                /* ukuran dasar gambar */
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
-  flex-shrink: 0;              /* gambar tidak mengecil */
+  flex-shrink: 0;
+  transition: transform 0.5s linear, opacity 0.5s linear;
+  opacity: 0.5;                /* default: redup */
+  transform: scale(0.7);       /* default: kecil */
+}
+
+/* Gambar yang di tengah: besar dan jelas */
+.galeri-img1.aktif {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);  /* efek highlight */
+  z-index: 5;
 }
 
 /* ===== TOMBOL KIRI-KANAN ===== */
