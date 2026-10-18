@@ -339,8 +339,8 @@ body {
 
 .galeri-wrapper1 {
   position: absolute;
-  left: 0px;                  /* sejajar padding kiri kotak */
-  right: 0px;                 /* sejajar padding kanan kotak */
+  left: 30px;                  /* sejajar padding kiri kotak */
+  right: 30px;                 /* sejajar padding kanan kotak */
   bottom: 1060px;               /* posisi di tengah ruang kosong bawah */
   height: 620px;               /* tinggi wadah, sesuaikan dengan bayangan */
   background: transparent;     /* wadah transparan */
@@ -353,6 +353,7 @@ body {
 
 /* ===== TRACK GAMBAR ===== */
 .galeri-track1 {
+  position: relative; 
   display: flex;
   gap: 20px;                   /* jarak antar gambar, bisa diatur */
   transition: transform 0.5s linear;  /* animasi smooth dan linear */
