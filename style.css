@@ -341,7 +341,7 @@ body {
   position: absolute;
   left: 30px;                  /* sejajar padding kiri kotak */
   right: 30px;                 /* sejajar padding kanan kotak */
-  bottom: 350px;               /* posisi di tengah ruang kosong bawah */
+  bottom: 1060px;               /* posisi di tengah ruang kosong bawah */
   height: 300px;               /* tinggi wadah, sesuaikan dengan bayangan */
   background: transparent;     /* wadah transparan */
   border: 2px solid rgba(255, 255, 255, 0.2);
