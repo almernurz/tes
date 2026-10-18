@@ -84,23 +84,22 @@
           <h3>Membuat dan berimajinasi suatu karya 3D modelling di software Blender dan Roblox Studio untuk meningkatkan skill dan membuat aset pada game, sekaligus untuk mendapatkan penghasilan.</h3>
         </div>
 
-         <!-- Galeri -->
+                <!-- Galeri -->
         <div class="galeri-wrapper1">
 
-          <button class="galeri-btn1 galeri-btn-kiri1" onclick="geserGaleri(-1)">‹</button>
+          <button class="galeri-btn1 galeri-btn-kiri1" onclick="geserGaleri1(-1)">‹</button>
 
           <div class="galeri-track1" id="galeriTrack1">
-            <img src="https://picsum.photos/200/150?random=1" alt="Gambar 1" class="galeri-img1">
-           <img src="https://picsum.photos/200/150?random=2" alt="Gambar 2" class="galeri-img1">
-            <img src="https://picsum.photos/200/150?random=3" alt="Gambar 3" class="galeri-img1">
-            <img src="https://picsum.photos/200/150?random=4" alt="Gambar 4" class="galeri-img1">
-            <img src="https://picsum.photos/200/150?random=5" alt="Gambar 5" class="galeri-img1">
+            <img src="https://picsum.photos/200/150?random=1" alt="Gambar 1" class="galeri-img1" data-index="0">
+            <img src="https://picsum.photos/200/150?random=2" alt="Gambar 2" class="galeri-img1" data-index="1">
+            <img src="https://picsum.photos/200/150?random=3" alt="Gambar 3" class="galeri-img1" data-index="2">
+            <img src="https://picsum.photos/200/150?random=4" alt="Gambar 4" class="galeri-img1" data-index="3">
+            <img src="https://picsum.photos/200/150?random=5" alt="Gambar 5" class="galeri-img1" data-index="4">
           </div>
 
-        <button class="galeri-btn1 galeri-btn-kanan1" onclick="geserGaleri(1)">›</button>
+          <button class="galeri-btn1 galeri-btn-kanan1" onclick="geserGaleri1(1)">›</button>
 
         </div>
-
         <div class="bayangan1"></div>
         </div>
       </div>
@@ -126,4 +125,33 @@
 
 
 </body>
+  <script>
+    let indeksAktif1 = 0;
+    const gambar1 = document.querySelectorAll('.galeri-img1');
+    const track1 = document.getElementById('galeriTrack1');
+    const wadah1 = document.querySelector('.galeri-wrapper1');
+
+    function perbaruiGaleri1() {
+      gambar1.forEach((img, i) => {
+        img.classList.toggle('aktif', i === indeksAktif1);
+      });
+
+      const gambarAktif = gambar1[indeksAktif1];
+      const posisiGambar = gambarAktif.offsetLeft;
+      const lebarGambar = gambarAktif.offsetWidth;
+      const lebarWadah = wadah1.clientWidth;
+
+      const geser = posisiGambar - (lebarWadah / 2) + (lebarGambar / 2);
+      track1.style.transform = `translateX(${-geser}px)`;
+    }
+
+    function geserGaleri1(arah) {
+      indeksAktif1 += arah;
+      if (indeksAktif1 < 0) indeksAktif1 = 0;
+      if (indeksAktif1 >= gambar1.length) indeksAktif1 = gambar1.length - 1;
+      perbaruiGaleri1();
+    }
+
+    perbaruiGaleri1();
+  </script>
 </html>
