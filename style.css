@@ -315,7 +315,7 @@ body {
   word-wrap: break-word;      
 }
 /* // TAMBAHAN: bayangan memudar di bawah kotak */
-.bayangan-bawah {
+.bayangan {
   position: absolute;
   left: 30px;                  /* sejajar dengan padding kiri kotak */
   right: 30px;                 /* sejajar dengan padding kanan kotak */
