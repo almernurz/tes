@@ -319,7 +319,7 @@ body {
   position: absolute;
   left: 0px;                  /* sejajar dengan padding kiri kotak */
   right: 0px;                 /* sejajar dengan padding kanan kotak */
-  bottom: 1000px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
+  bottom: 1100px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
   height: 620px;               /* tinggi bayangan */
   background: linear-gradient(
     to bottom,
@@ -384,7 +384,7 @@ body {
   position: absolute;
   left: 0px;                  /* sejajar dengan padding kiri kotak */
   right: 0px;                 /* sejajar dengan padding kanan kotak */
-  bottom: 100px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
+  bottom: 90px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
   height: 620px;               /* tinggi bayangan */
   background: linear-gradient(
     to bottom,
