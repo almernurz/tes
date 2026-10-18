@@ -319,13 +319,17 @@ body {
   position: absolute;
   left: 0px;                  /* sejajar dengan padding kiri kotak */
   right: 0px;                 /* sejajar dengan padding kanan kotak */
-  bottom: 570px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
-  height: 400px;               /* tinggi bayangan */
+  bottom: 350px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
+  height: 500px;               /* tinggi bayangan */
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,       /* atas transparan */
+    rgba(0, 0, 0, 0.7) 15%, 
+    rgba(0, 0, 0, 1) 35%, 
     rgba(0, 0, 0, 1) 50%,  
-    rgba(0, 0, 0, 0) 100%,     /* bawah transparan */
+    rgba(0, 0, 0, 1) 65%,   /* tengah gelap pekat */
+    rgba(0, 0, 0, 0.7) 85%, 
+    rgba(0, 0, 0, 0) 100%     /* bawah transparan */
   );
   pointer-events: none;
   border-radius: 8px;
