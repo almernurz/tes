@@ -325,9 +325,9 @@ body {
     to bottom,
     rgba(17, 17, 17, 0) 0%,       /* atas transparan */
     rgba(17, 17, 17, 0.7) 15%, 
-    rgba(17, 17, 17, 1) 35%, 
-    rgb(17, 17, 17, 1) 50%,  
-    rgba(17, 17, 17, 1) 65%,   /* tengah gelap pekat */
+    rgba(4, 4, 4, 1) 35%, 
+    rgba(4, 4, 4, 1) 50%,  
+    rgba(4, 4, 4, 1) 65%,   /* tengah gelap pekat */
     rgba(17, 17, 17, 0.7) 85%, 
     rgba(17, 17, 17, 0) 100%     /* bawah transparan */
   );
