@@ -323,13 +323,13 @@ body {
   height: 600px;               /* tinggi bayangan */
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0%,       /* atas transparan */
-    rgba(0, 0, 0, 0.7) 15%, 
-    rgba(0, 0, 0, 1) 35%, 
-    rgba(0, 0, 0, 1) 50%,  
-    rgba(0, 0, 0, 1) 65%,   /* tengah gelap pekat */
-    rgba(0, 0, 0, 0.7) 85%, 
-    rgba(0, 0, 0, 0) 100%     /* bawah transparan */
+    rgba(17, 17, 17, 0) 0%,       /* atas transparan */
+    rgba(17, 17, 17, 0.7) 15%, 
+    rgba(17, 17, 17, 1) 35%, 
+    rgb(17, 17, 17, 1) 50%,  
+    rgba(17, 17, 17, 1) 65%,   /* tengah gelap pekat */
+    rgba(17, 17, 17, 0.7) 85%, 
+    rgba(17, 17, 17, 0) 100%     /* bawah transparan */
   );
   pointer-events: none;
   border-radius: 8px;
