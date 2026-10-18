@@ -314,6 +314,22 @@ body {
   margin-bottom: 15px;
   word-wrap: break-word;      
 }
+/* // TAMBAHAN: bayangan memudar di bawah kotak */
+.bayangan-bawah {
+  position: absolute;
+  left: 30px;                  /* sejajar dengan padding kiri kotak */
+  right: 30px;                 /* sejajar dengan padding kanan kotak */
+  bottom: 350px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
+  height: 120px;               /* tinggi bayangan */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,       /* atas transparan */
+    rgba(0, 0, 0, 0.9) 50%,    /* tengah gelap pekat */
+    rgba(0, 0, 0, 0) 100%      /* bawah transparan */
+  );
+  pointer-events: none;
+  border-radius: 8px;
+}
 
 
 /* ==kotak akhir */
