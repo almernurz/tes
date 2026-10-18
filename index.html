@@ -125,24 +125,34 @@
 
 
 </body>
-  <script>
+    <script>
     let indeksAktif1 = 0;
     const gambar1 = document.querySelectorAll('.galeri-img1');
     const track1 = document.getElementById('galeriTrack1');
     const wadah1 = document.querySelector('.galeri-wrapper1');
+    const kotak1 = document.querySelector('.kotak1');
 
     function perbaruiGaleri1() {
+      
       gambar1.forEach((img, i) => {
         img.classList.toggle('aktif', i === indeksAktif1);
-     });
+      });
 
       const gambarAktif = gambar1[indeksAktif1];
-      const posisiGambar = gambarAktif.offsetLeft;
-      const lebarGambar = gambarAktif.offsetWidth;
-      const lebarWadah = wadah1.clientWidth;
+      const rectGambar = gambarAktif.getBoundingClientRect();
+      const rectKotak = kotak1.getBoundingClientRect();
 
-      const geser = posisiGambar - (lebarWadah / 2) + (lebarGambar / 2);
-      track1.style.transform = `translateX(${-geser}px)`;
+      const posisiGambarDiKotak = rectGambar.left - rectKotak.left;
+
+      const lebarKotak = rectKotak.width;
+      const lebarGambar = rectGambar.width;
+
+      const geser = posisiGambarDiKotak - (lebarKotak / 2) + (lebarGambar / 2);
+
+      const transformSekarang = new DOMMatrix(getComputedStyle(track1).transform);
+      const translateSekarang = transformSekarang.m41;
+
+      track1.style.transform = `translateX(${translateSekarang - geser}px)`;
     }
 
     function geserGaleri1(arah) {
@@ -152,6 +162,6 @@
       perbaruiGaleri1();
     }
 
-    perbaruiGaleri1();
+    window.addEventListener('load', perbaruiGaleri1);
   </script>
 </html>
