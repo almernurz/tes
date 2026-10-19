@@ -123,11 +123,11 @@
                 <!-- Galeri -->
         <div class="galeri-wrapper2">
 
-          <button class="galeri-btn2 galeri-btn-kiri2" onclick="geserGaleri1(-1)">
+          <button class="galeri-btn2 galeri-btn-kiri2" onclick="geserGaleri2(-1)">
             <span class="panah2">‹</span>
           </button>
 
-          <button class="galeri-btn2 galeri-btn-kanan2" onclick="geserGaleri1(1)">
+          <button class="galeri-btn2 galeri-btn-kanan2" onclick="geserGaleri2(1)">
             <span class="panah2">›</span>
           </button>
 
@@ -203,6 +203,8 @@
       window.addEventListener('resize', perbaruiGaleri1);
     }
     //Galeri 1 akhir
+
+    //Galeri 2 awal
     let indeksAktif2 = 0;
     const gambar2 = document.querySelectorAll('.galeri-img2');
     const track2 = document.getElementById('galeriTrack2');
@@ -247,7 +249,6 @@
     } else {
       window.addEventListener('resize', perbaruiGaleri2);
     }
-    //Galeri 2 awal
     
     //Galeri 2 akhir
   </script>
