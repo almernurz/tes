@@ -379,7 +379,7 @@ body {
 
 .galeri-btn1 {
   position: absolute;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
@@ -392,8 +392,8 @@ body {
   cursor: pointer;
   z-index: 20;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 10px;
+  margin-left: 10px;
   transition: background 0.2s;
 }
 
