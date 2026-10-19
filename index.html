@@ -205,6 +205,7 @@
     //Galeri 1 akhir
 
     //Galeri 2 awal
+    let indeksAktif2 = 0;
     const gambar2 = document.querySelectorAll('.galeri-img2');
     const track2 = document.getElementById('galeriTrack2');
     const wadah2 = document.querySelector('.galeri-wrapper2');
@@ -212,11 +213,11 @@
 
     function perbaruiGaleri1() {
 
-      gambar1.forEach((img, i) => {
-        img.classList.toggle('aktif', i === indeksAktif1);
+      gambar2.forEach((img, i) => {
+        img.classList.toggle('aktif', i === indeksAktif2);
       });
 
-      const gambarAktif = gambar1[indeksAktif1];
+      const gambarAktif = gambar2[indeksAktif2];
       const rectGambar = gambarAktif.getBoundingClientRect();
       const rectKotak = kotak1.getBoundingClientRect();
 
@@ -234,9 +235,9 @@
     }
 
     function geserGaleri1(arah) {
-      indeksAktif1 += arah;
-      if (indeksAktif1 < 0) indeksAktif1 = 0;
-      if (indeksAktif1 >= gambar1.length) indeksAktif1 = gambar1.length - 1;
+      indeksAktif2 += arah;
+      if (indeksAktif2 < 0) indeksAktif2 = 0;
+      if (indeksAktif2 >= gambar2.length) indeksAktif2 = gambar2.length - 1;
       perbaruiGaleri1();
     }
 
