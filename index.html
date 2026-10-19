@@ -167,29 +167,21 @@
         img.classList.toggle('aktif', i === indeksAktif1);
       });
 
-      track1.style.transform = 'translateX(0)';
-
       const gambarAktif = gambar1[indeksAktif1];
       const rectGambar = gambarAktif.getBoundingClientRect();
       const rectKotak = kotak1.getBoundingClientRect();
-      const rectWadah = wadah1.getBoundingClientRect();
 
       const posisiGambarDiKotak = rectGambar.left - rectKotak.left;
+
       const lebarKotak = rectKotak.width;
       const lebarGambar = rectGambar.width;
 
-      let geser = posisiGambarDiKotak - (lebarKotak / 2) + (lebarGambar / 2);
+      const geser = posisiGambarDiKotak - (lebarKotak / 2) + (lebarGambar / 2);
 
-      const lebarTrack = track1.scrollWidth;
-      const lebarWadah = rectWadah.width;
-      const batasKiri = -(lebarTrack - lebarWadah);   
-      const batasKanan = 0;
+      const transformSekarang = new DOMMatrix(getComputedStyle(track1).transform);
+      const translateSekarang = transformSekarang.m41;
 
-      if (geser > batasKanan) geser = batasKanan;
-      if (geser < batasKiri) geser = batasKiri;
-
-      // 6. Terapkan
-      track1.style.transform = `translateX(${-geser}px)`;
+      track1.style.transform = `translateX(${translateSekarang - geser}px)`;
     }
 
     function geserGaleri1(arah) {
