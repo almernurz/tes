@@ -123,11 +123,11 @@
                 <!-- Galeri -->
         <div class="galeri-wrapper2">
 
-          <button class="galeri-btn2 galeri-btn-kiri2" onclick="geserGaleri2(-1)">
+          <button class="galeri-btn2 galeri-btn-kiri2" onclick="geserGaleri1(-1)">
             <span class="panah2">‹</span>
           </button>
 
-          <button class="galeri-btn2 galeri-btn-kanan2" onclick="geserGaleri2(1)">
+          <button class="galeri-btn2 galeri-btn-kanan2" onclick="geserGaleri1(1)">
             <span class="panah2">›</span>
           </button>
 
@@ -154,8 +154,7 @@
 
 
 </body>
-  <script>
-    //Galeri 1 awal
+      <script>
     let indeksAktif1 = 0;
     const gambar1 = document.querySelectorAll('.galeri-img1');
     const track1 = document.getElementById('galeriTrack1');
@@ -200,57 +199,10 @@
       });
       observer.observe(kotak1);
     } else {
+
       window.addEventListener('resize', perbaruiGaleri1);
     }
-    //Galeri 1 akhir
-
-    //Galeri 2 awal
-    let indeksAktif2 = 0;
-    const gambar2 = document.querySelectorAll('.galeri-img2');
-    const track2 = document.getElementById('galeriTrack2');
-    const wadah2 = document.querySelector('.galeri-wrapper2');
-    const kotak2 = document.querySelector('.kotak2');
-
-    function perbaruiGaleri2() {
-      gambar2.forEach((img, i) => {
-        img.classList.toggle('aktif', i === indeksAktif2);
-      });
-
-      const gambarAktif2 = gambar2[indeksAktif2];
-      const rectGambar2 = gambarAktif2.getBoundingClientRect();
-      const rectKotak2 = kotak2.getBoundingClientRect();
-
-      const posisiGambarDiKotak2 = rectGambar2.left - rectKotak2.left;
-      const lebarKotak2 = rectKotak2.width;
-      const lebarGambar2 = rectGambar2.width;
-
-      const geser2 = posisiGambarDiKotak2 - (lebarKotak2 / 2) + (lebarGambar2 / 2);
-
-      const transformSekarang2 = new DOMMatrix(getComputedStyle(track2).transform);
-      const translateSekarang2 = transformSekarang2.m41;
-
-      track2.style.transform = `translateX(${translateSekarang2 - geser2}px)`;
-    }
-
-    function geserGaleri2(arah) {
-      indeksAktif2 += arah;
-      if (indeksAktif2 < 0) indeksAktif2 = 0;
-      if (indeksAktif2 >= gambar2.length) indeksAktif2 = gambar2.length - 1;
-      perbaruiGaleri2();
-    }
-
-    window.addEventListener('load', perbaruiGaleri2);
-
-    if (window.ResizeObserver) {
-      const observer2 = new ResizeObserver(() => {
-        perbaruiGaleri2();
-      });
-      observer2.observe(kotak2);
-    } else {
-      window.addEventListener('resize', perbaruiGaleri2);
-    }
     
-    //Galeri 2 akhir
   </script>
   
 </html>
