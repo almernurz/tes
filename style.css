@@ -387,18 +387,25 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  font-size: 3rem;
-  font-weight: bold;
   cursor: pointer;
   z-index: 20;
-
-  display: flex;
-  justify-content: center;     /* // horizontal: tepat di tengah */
-  align-items: center;         /* // vertikal: tepat di tengah */
-  line-height: 1;              /* // netralkan jarak baris */
-  padding: 0;                  /* // hapus semua padding */
-
   transition: background 0.2s;
+
+  overflow: hidden;
+}
+
+.panah {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+
+  top: 50%;                  
+  left: 50%;                   
+  transform: translate(-50%, -50%); 
+
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .galeri-btn1:hover {
