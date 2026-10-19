@@ -156,8 +156,8 @@
 
 
 </body>
-        <script>
-    // ===== GALERI 1 =====
+      <script>
+    //Galeri 1 awal
     let indeksAktif1 = 0;
     const gambar1 = document.querySelectorAll('.galeri-img1');
     const track1 = document.getElementById('galeriTrack1');
@@ -165,32 +165,26 @@
     const kotak1 = document.querySelector('.kotak1');
 
     function perbaruiGaleri1() {
+
       gambar1.forEach((img, i) => {
         img.classList.toggle('aktif', i === indeksAktif1);
       });
 
-      track1.style.transform = 'translateX(0)';
+      const gambarAktif = gambar1[indeksAktif1];
+      const rectGambar = gambarAktif.getBoundingClientRect();
+      const rectKotak = kotak1.getBoundingClientRect();
 
-      const gambarAktif1 = gambar1[indeksAktif1];
-      const rectGambar1 = gambarAktif1.getBoundingClientRect();
-      const rectKotak1 = kotak1.getBoundingClientRect();
-      const rectWadah1 = wadah1.getBoundingClientRect();
+      const posisiGambarDiKotak = rectGambar.left - rectKotak.left;
 
-      const posisiGambarDiKotak1 = rectGambar1.left - rectKotak1.left;
-      const lebarKotak1 = rectKotak1.width;
-      const lebarGambar1 = rectGambar1.width;
+      const lebarKotak = rectKotak.width;
+      const lebarGambar = rectGambar.width;
 
-      let geser1 = posisiGambarDiKotak1 - (lebarKotak1 / 2) + (lebarGambar1 / 2);
+      const geser = posisiGambarDiKotak - (lebarKotak / 2) + (lebarGambar / 2);
 
-      const lebarTrack1 = track1.scrollWidth;
-      const lebarWadah1 = rectWadah1.width;
-      const batasKiri1 = -(lebarTrack1 - lebarWadah1);
-      const batasKanan1 = 0;
+      const transformSekarang = new DOMMatrix(getComputedStyle(track1).transform);
+      const translateSekarang = transformSekarang.m41;
 
-      if (geser1 > batasKanan1) geser1 = batasKanan1;
-      if (geser1 < batasKiri1) geser1 = batasKiri1;
-
-      track1.style.transform = `translateX(${-geser1}px)`;
+      track1.style.transform = `translateX(${translateSekarang - geser}px)`;
     }
 
     function geserGaleri1(arah) {
@@ -203,55 +197,48 @@
     window.addEventListener('load', perbaruiGaleri1);
 
     if (window.ResizeObserver) {
-      const observer1 = new ResizeObserver(() => {
+      const observer = new ResizeObserver(() => {
         perbaruiGaleri1();
       });
-      observer1.observe(kotak1);
+      observer.observe(kotak1);
     } else {
       window.addEventListener('resize', perbaruiGaleri1);
     }
+    //Galeri 1 akhir
 
-    // ===== GALERI 2 =====
-    let indeksAktif2 = 0;                   
+    //Galeri 2 awal
+     let indeksAktif2 = 0;
     const gambar2 = document.querySelectorAll('.galeri-img2');
     const track2 = document.getElementById('galeriTrack2');
     const wadah2 = document.querySelector('.galeri-wrapper2');
     const kotak2 = document.querySelector('.kotak2');
 
     function perbaruiGaleri2() {
+
       gambar2.forEach((img, i) => {
         img.classList.toggle('aktif', i === indeksAktif2);
       });
 
+      const gambarAktif = gambar2[indeksAktif2];
+      const rectGambar = gambarAktif.getBoundingClientRect();
+      const rectKotak = kotak2.getBoundingClientRect();
 
-      track2.style.transform = 'translateX(0)';
+      const posisiGambarDiKotak = rectGambar.left - rectKotak.left;
 
-      const gambarAktif2 = gambar2[indeksAktif2];
-      const rectGambar2 = gambarAktif2.getBoundingClientRect();
-      const rectKotak2 = kotak2.getBoundingClientRect();
-      const rectWadah2 = wadah2.getBoundingClientRect();
+      const lebarKotak = rectKotak.width;
+      const lebarGambar = rectGambar.width;
 
-      const posisiGambarDiKotak2 = rectGambar2.left - rectKotak2.left;
-      const lebarKotak2 = rectKotak2.width;
-      const lebarGambar2 = rectGambar2.width;
+      const geser = posisiGambarDiKotak - (lebarKotak / 2) + (lebarGambar / 2);
 
-      let geser2 = posisiGambarDiKotak2 - (lebarKotak2 / 2) + (lebarGambar2 / 2);
+      const transformSekarang = new DOMMatrix(getComputedStyle(track2).transform);
+      const translateSekarang = transformSekarang.m41;
 
-      // Batas geser
-      const lebarTrack2 = track2.scrollWidth;
-      const lebarWadah2 = rectWadah2.width;
-      const batasKiri2 = -(lebarTrack2 - lebarWadah2);
-      const batasKanan2 = 0;
-
-      if (geser2 > batasKanan2) geser2 = batasKanan2;
-      if (geser2 < batasKiri2) geser2 = batasKiri2;
-
-      track2.style.transform = `translateX(${-geser2}px)`; 
+      track2.style.transform = `translateX(${translateSekarang - geser}px)`;
     }
 
     function geserGaleri2(arah) {
       indeksAktif2 += arah;
-      if (indeksAktif2 < 0) indeksAktif2 = 0;             
+      if (indeksAktif2 < 9) indeksAktif2 = 9;
       if (indeksAktif2 >= gambar2.length) indeksAktif2 = gambar2.length - 1;
       perbaruiGaleri2();
     }
@@ -259,10 +246,10 @@
     window.addEventListener('load', perbaruiGaleri2);
 
     if (window.ResizeObserver) {
-      const observer2 = new ResizeObserver(() => {
+      const observer = new ResizeObserver(() => {
         perbaruiGaleri2();
       });
-      observer2.observe(kotak2);
+      observer.observe(kotak2);
     } else {
       window.addEventListener('resize', perbaruiGaleri2);
     }
