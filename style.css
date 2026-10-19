@@ -393,7 +393,7 @@ body {
   z-index: 20;
   display: flex;
   padding-left: 20px;
-  padding-top: -25px;
+  padding-top: -40px;
   transition: background 0.2s;
 }
 
