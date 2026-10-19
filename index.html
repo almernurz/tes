@@ -231,7 +231,7 @@
       const geser = posisiGambarDiKotak - (lebarKotak / 2) + (lebarGambar / 2);
 
       const transformSekarang = new DOMMatrix(getComputedStyle(track2).transform);
-      const translateSekarang = transformSekarang.m41;
+      const translateSekarang = transformSekarang.m42;
 
       track1.style.transform = `translateX(${translateSekarang - geser}px)`;
     }
