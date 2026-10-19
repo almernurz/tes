@@ -388,7 +388,7 @@ body {
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 30;
+  z-index: 20;
   transition: background 0.2s;
 
   overflow: hidden;
@@ -414,11 +414,11 @@ body {
 }
 
 .galeri-btn-kiri1 {
-  left: -25px;
+  left: 5px;
 }
 
 .galeri-btn-kanan1 {
-  right: -25px;
+  right: 5px;
 }
 /* ==Galeri 1 akhir */
 /* ==kotak 1 */
