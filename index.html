@@ -1,611 +1,206 @@
- /* ==Page 1 awal */
- /*==Halaman*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;        /* kunci total, halaman tidak bisa di-swipe */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #212121;
-  color: #fff;
-}
-
-
-/* ==Header mulai*/
-.header {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: visible;
-  margin-bottom: 120px;
-}
-
-/* ===== BANNER WRAPPER ===== */
-.banner-wrapper {
-  position: relative;        /* patokan untuk overlay */
-  width: 100%;
-  height: 100%;
-  overflow: hidden;          /* supaya overlay tidak keluar */
-}
-
-/* ===== BANNER ===== */
-.banner {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* ===== OVERLAY GRADASI DI DALAM BANNER ===== */
-.banner-overlay {
-  position: absolute;
-  inset: 0;                  /* menutupi seluruh banner */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.75) 0%,   /* atas gelap */
-    rgba(0, 0, 0, 0.2) 50%,  /* tengah agak terang */
-    rgba(0, 0, 0, 0.75) 100%  /* bawah gelap lagi */
-  );
-  pointer-events: none;      /* supaya tidak menghalangi klik */
-}
-
-/*==Trapesium awal*/
-.trapesium {
-  position: absolute;
-  bottom: -30;
-  right: 0px;
-  width: 800px;
-  height: 70px;
-  background: #000;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    15% 100%
-  );
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* // HAPUS overflow-x, white-space, scrollbar dari sini */
-}
-
-/* ===== ISI TRAPESIUM: yang bisa di-swipe ===== */
-.trapesium-isi {
-  display: flex;
-  margin-left: 30px;
-  gap: 70px;
-  align-items: left;
-  max-width: 100%;            /* biar tidak mentok pinggir trapesium */
-  overflow-x: auto;          /* // DI SINI yang bikin swipe */
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 0 10px;
-}
-
-.menu-item {
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: color 0.3s;
-  flex-shrink: 0;
-}
-
-.menu-item:hover {
-  color: #00ffff;
-}
-
-.menu-dropdown {
-  display: none;             /* default: tidak tampil di desktop */
-}
-
-.menu-toggle {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Dropdown: kotak hitam seperti popup, default tersembunyi */
-.dropdown-isi {
-  display: none;             /* HANYA SATU display, ini yang bikin sembunyi */
-  position: absolute;
-  top: 100%;                 /* tepat di bawah tombol */
-  right: 0;
-  background: #000;
-  border: 1px solid #333;
-  border-radius: 8px;
-  min-width: 150px;
-  flex-direction: column;
-  padding: 8px 0;
-  z-index: 100;              /* di atas semua elemen */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-}
-
-/* Munculkan dropdown saat tombol diklik / disentuh */
-.menu-dropdown:focus-within .dropdown-isi,
-.menu-dropdown:hover .dropdown-isi {
-  display: flex;
-}
-
-.dropdown-item {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 0.95rem;
-  transition: background 0.2s;
-}
-
-.dropdown-item:hover {
-  background: #1a1a1a;
-  color: #00ffff;
-}
-/*==Trapesium akhir*/
-
-/* ==PP awal*/
-.pp-wrapper {
-  position: absolute;
-  left: 170px;
-  bottom: -590px;
-  display: flex;
-  flex-direction: row;       /* // BERUBAH: dari column jadi row */
-  align-items: center;       /* // teks sejajar vertikal dengan PP */
-  gap: 20px;                 /* // jarak antara PP dan teks */
-}
-
-/* // TAMBAHAN: pembungkus teks, tersusun ke bawah */
-.teks-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* ===== FOTO PROFIL ===== */
-.pp {
-  width: 400px;
-  height: 500px;
-  border-radius: 5%;
-  border: 4px solid #ffffff;
-  object-fit: cover;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);  /* ada px-nya */
-}
-
-/* ===== TEKS DI BAWAH PP ===== */
-.new-text {
-  margin-top: 0;             /* // tidak perlu margin atas lagi */
-  margin-left: 20px;
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-align: left;
-  letter-spacing: 1px;
-}
-
-.new-text1 {
-  margin-top: 10px;          /* // jarak antar teks saja */
-  margin-left: 20px;
-  font-size: 3.5rem;
-  color: #ffffff;
-  text-align: left;
-  letter-spacing: 1px;
-}
-/* ==PP akhir*/
-/*==Header akhir */
-
-
-/* ==Deskripsi awal */
-.deskripsi {
-  padding-top: 150px;  /* padding atas besar karena PP menjuntai 100px */
-  padding-left: 0;
-  max-width: 1000px;
-  margin: 170px;
-  margin-top: 500px;
-  text-align: left;
-}
-
-.deskripsi p {
-  color: #ccc;
-  line-height: 1.5;
-  font-size: 2rem;
-}
-/* ==Deskripsi akhir */
-/* ==Page 1 akhir */
-
-/* ==Page 2 awal */
-.halaman2 {
-  position: relative;
-  width: 100%;
-  background: #1a1a1a;
-  padding: 200px 170px 200px;
-  margin-top: 0;
-}
-
-.border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
-.isi {
-  position: relative;
-  z-index: 2;
-  max-width: 100%;           
-  margin-left: 0;           
-  text-align: left;
-}
-
-.isi h2 {
-  font-size: 4rem;
-  color: #ffffff;
-  margin-bottom: 75px;
-  line-height: 1;            
-  font-style: italic;
-  letter-spacing: 3px;
-}
-
-/* ==kotak awal */
-/* ==kotak 1 */
-.kotak1 {
-  width: 100%;
-  background: #222222;
-  border: 2px solid #4d4d4d;
-  border-radius: 12px;
-  padding: 40px 30px 700px 30px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-
-  display: flex;
-  align-items: stretch;        
-  gap: 30px;
-  overflow: hidden;          
-}
-
-.gmb3D1 {
-  width: 300px;
-  height: 220px;
-  object-fit: contain;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-
-.teks-wrapper-kotak1 {
-  flex: 1;                    
-  max-width: 100%;              
-  border-radius: 8px;
-  padding:20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;    
-  overflow: hidden;          
-}
-
-.text1 {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 15px;
-  word-wrap: break-word;      
-}
-/* // TAMBAHAN: bayangan memudar di bawah kotak */
-.bayangan1 {
-  position: absolute;
-  left: 0px;                 
-  right: 0px;                
-  bottom: 1060px;               
-  height: 620px;               
-  background: linear-gradient(
-    to bottom,
-    rgba(17, 17, 17, 0) 0%,   
-    rgba(17, 17, 17, 0.7) 15%, 
-    rgba(12, 12, 12, 1) 35%, 
-    rgba(12, 12, 12, 1) 50%,  
-    rgba(12, 12, 12, 1) 65%,   
-    rgba(17, 17, 17, 0.7) 85%, 
-    rgba(17, 17, 17, 0) 100%    
-  );
-  pointer-events: none;
-  border-radius: 8px;
-}
-
-/* ==Galeri 1 awal */
-
-.galeri-wrapper1 {
-  position: absolute;
-  left: 0px;                  
-  right: 0px;                 
-  bottom: 1060px;        
-  height: 620px;              
-  background: transparent;     
-  display: flex;
-  align-items: center;
-  overflow: hidden;     
-  z-index: 10;                
-  padding: 0 50px;        
-}
-
-.galeri-track1 {
-  position: relative; 
-  display: flex;
-  gap: 5px;                   
-  transition: transform 0.5s linear;  
-  will-change: transform;
-  align-items: center;         
-}
-
-.galeri-img1 {
-  width: 700px;               
-  height: 394px;
-  object-fit: cover;
-  flex-shrink: 0;
-  transition: transform 0.5s linear, opacity 0.5s linear;
-  opacity: 0.5;                
-  transform: scale(0.5);      
-}
-
-.galeri-img1.aktif {
-  opacity: 1;
-  transform: scale(1);
-  box-shadow: 0 0 35px rgb(252, 252, 252); 
-  z-index: 5;
-}
-
-.galeri-btn1 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 20;
-  transition: background 0.2s;
-
-  overflow: hidden;
-}
-
-.panah {
-  position: absolute;
-  font-size: 4rem;
-  font-weight: bold;
-  line-height: 1;
-
-  top: 44%;                  
-  left: 50%;                   
-  transform: translate(-50%, -50%); 
-
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-.galeri-btn1:hover {
-  background: rgba(255, 255, 255, 0.7);
-  color: #000;
-}
-
-.galeri-btn-kiri1 {
-  left: 5px;
-}
-
-.galeri-btn-kanan1 {
-  right: 5px;
-}
-/* ==Galeri 1 akhir */
-/* ==kotak 1 */
-/* ==kotak 2 */
-.kotak2 {
-  width: 100%;
-  background: #222222;
-  border: 2px solid #4d4d4d;
-  border-radius: 12px;
-  padding: 40px 30px 700px 30px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-
-  display: flex;
-  align-items: stretch;        
-  gap: 30px;
-  overflow: hidden;          
-}
-
-.gmb3D2 {
-  width: 300px;
-  height: 220px;
-  object-fit: contain;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-
-.teks-wrapper-kotak2 {
-  flex: 1;                    
-  max-width: 100%;              
-  border-radius: 8px;
-  padding:20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;    
-  overflow: hidden;          
-}
-
-.text2 {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 15px;
-  word-wrap: break-word;      
-}
-
-.bayangan2 {
-  position: absolute;
-  left: 0px;                  
-  right: 0px;                
-  bottom: 50px;               
-  height: 620px;               
-  background: linear-gradient(
-    to bottom,
-    rgba(17, 17, 17, 0) 0%,       
-    rgba(17, 17, 17, 0.7) 15%, 
-    rgba(12, 12, 12, 1) 35%, 
-    rgba(12, 12, 12, 1) 50%,  
-    rgba(12, 12, 12, 1) 65%,  
-    rgba(17, 17, 17, 0.7) 85%, 
-    rgba(17, 17, 17, 0) 100%     
-  );
-  pointer-events: none;
-  border-radius: 8px;
-}
-
-/* ==Galeri 2 awal */
-
-/* ==Galeri 2 akhir */
-/* ==kotak 2 */
-/* ==kotak akhir */
-/* ==Page 2 akhir */
-
-/* ===== RESPONSIF: HP ===== */
-@media (max-width: 560px) {
-/* ==Page 1 awal */
-  .header {
-    height: 200px;
-  }
-  
-  .trapesium {
-    right: 0px;             
-    width: 180px;           
-    height: 50px;
-    justify-content: center;
-  }
-
-  .trapesium-isi {
-    max-width: 85%;
-    gap: 20px;
-    padding: 0 8px;
-  }
-
-  .menu-item {
-    font-size: 0.85rem;
-  }
-
-  .trapesium-isi {
-    display: none;
-  }
-
-  /* Tampilkan tombol ☰ */
-  .menu-dropdown {
-    display: block;
-    position: absolute;
-    bottom: -50px;            
-    right: 0;
-    width: 180px;             
-    height: 50px;
-    z-index: 50;
-  }
-
-  .banner {
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .pp-wrapper {
-    left: 20px;
-    bottom: -250px;
-    flex-direction: row;     
-    gap: 10px;
-  }
-
-  .teks-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .pp {
-    width: 150px;
-    height: 188px;
-    border-width: 3px;
-  }
-
-  .new-text {
-    font-size: 1rem;
-  }
-
-  .new-text1 {
-    font-size: 2rem;
-  }
-
-
-  .deskripsi {
-    padding: 200px 20px 40px;  
-    margin: 0;                
-    max-width: 100%;          
-    text-align: left;
-  }
-
-  .deskripsi p {
-    font-size: 1rem;
-  }
-  /* ==Page 1 akhir */
-
-  /* ==Page 2 awal */
-  .halaman2 {
-    padding: 60px 15px 40px;
-  }
-
-  .border {
-    height: 40px;             
-  }
-
-  .isi h2 {
-    font-size: 1.5rem;
-  }
-
-  .kotak {
-    flex-direction: row;      
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .gmb3D {
-    width: 80px;
-    height: 80px;
-  }
-
-  .teks{
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-
-
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header dengan Banner dan PP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--Page 1 awal-->
+    <!--Header awal-->
+  <header class="header">
+    <div class="banner-wrapper">
+    <img
+      src="https://cdn.phototourl.com/member/2026-09-26-f6a7bb28-1a92-4208-8d58-c47eac867726.png" 
+      alt="Banner"
+      class="banner"
+    >
+    <div class="banner-overlay"></div>
+    </div>
+    
+    <!--PP awal-->
+    <div class="pp-wrapper">
+      <img
+        src="https://cdn.phototourl.com/member/2026-10-06-9b5c8bc9-9bda-4538-aa26-c1875909c5a0.jpg"
+        alt="Foto Profil"
+        class="pp">
+      <div class="teks-wrapper">
+        <p class="new-text">Perkenalkan saya -</p>
+        <p1 class="new-text1">Muhammad Almer Nur Zhafar</p1>
+      </div>
+    </div>
+    <!--PP akhir-->
+
+    <!--Trapesium menu awal-->
+  <div class="trapesium">
+    <div class="trapesium-isi">
+        <span class="menu-item">Home</span>
+        <span class="menu-item">Skill</span>
+        <span class="menu-item">My work</span>
+        <span class="menu-item">Contact</span>
+    </div>
+  </div>
+
+  <div class="menu-dropdown">
+    <button class="menu-toggle">☰</button>
+    <div class="dropdown-isi">
+      <a href="#" class="dropdown-item">Home</a>
+      <a href="#" class="dropdown-item">Skill</a>
+      <a href="#" class="dropdown-item">My work</a>
+      <a href="#" class="dropdown-item">Contact</a>
+    </div>
+  </div>
+  <!--Trapesium menu akhir-->
+
+  </header>
+    <!--Header akhir-->
+
+
+    <!--Deskripsi awal-->
+  </div>
+  <section class="deskripsi">
+    <p>
+      Saya lulusan TKJ dari SMKN 2 Surabaya yang berbakat dalam membuat 3D dan sekaligus Developer game di Roblox.
+    </p>
+  </section>
+  <!--Deskripsi akhir-->
+  <!--Page 1 akhir-->
+
+  <!--Page 2 awal-->
+  <section class="halaman2">
+    <div class="border"></div>
+      <div class="isi">
+      <h2>Skill</h2>
+
+      <!--Kotak awal 1-->
+      <div class="kotak1">
+        <img src="https://cdn.phototourl.com/member/2026-10-08-3355b7db-bb62-4e68-8fd6-d8f85a936c0b.png"
+        alt="gambar1"
+        class="gmb3D1">
+        <div class="teks-wrapper-kotak1">
+        <div class="text1">
+          <h3>Membuat dan berimajinasi suatu karya 3D modelling di software Blender dan Roblox Studio untuk meningkatkan skill dan membuat aset pada game, sekaligus untuk mendapatkan penghasilan.</h3>
+        </div>
+                <!-- Galeri -->
+        <div class="galeri-wrapper1">
+
+          <button class="galeri-btn1 galeri-btn-kiri1" onclick="geserGaleri1(-1)">
+            <span class="panah1">‹</span>
+          </button>
+
+          <button class="galeri-btn1 galeri-btn-kanan1" onclick="geserGaleri1(1)">
+            <span class="panah1">›</span>
+          </button>
+
+          <div class="galeri-track1" id="galeriTrack1">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-3309a2fb-2574-4418-aff9-179139bec831.png" alt="Gambar 1" class="galeri-img1" data-index="0">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-e9a2121f-ff56-4a33-8d9b-5615cf83d00b.png" alt="Gambar 2" class="galeri-img1" data-index="1">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-ed892b4f-9580-43ab-b885-213bbc76d20d.png" alt="Gambar 3" class="galeri-img1" data-index="2">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-58f5a218-28ef-41b1-875e-e2b1ebf75a4c.png" alt="Gambar 4" class="galeri-img1" data-index="3">
+            <img src="https://img.sanishtech.com/u/5f79f79f9cc0f4b320326b2e64cc7e66.png" alt="Gambar 5" class="galeri-img1" data-index="4">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-dc46cd79-9b62-4d01-80c4-113a4b515950.png" alt="Gambar 6" class="galeri-img1" data-index="5">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-5e418d23-e65a-4025-8988-6dd63813f90d.png" alt="Gambar 7" class="galeri-img1" data-index="6">
+            <img src="https://cdn.phototourl.com/member/2026-10-19-0f54b715-224f-4fca-87bc-2e004e06fe0d.png" alt="Gambar 8" class="galeri-img1" data-index="7">
+          </div>
+
+        </div>
+        <div class="bayangan1"></div>
+        </div>
+      </div>
+      <!--Kotak akhir 1-->
+
+      <!--Kotak awal 2-->
+      <div class="kotak2">
+        <img src="https://cdn.phototourl.com/member/2026-10-08-3355b7db-bb62-4e68-8fd6-d8f85a936c0b.png"
+        alt="gambar2"
+        class="gmb3D2">
+        <div class="teks-wrapper-kotak2">
+        <div class="text2">
+          <h3>Membuat dan berimajinasi suatu karya 3D modelling di software Blender dan Roblox Studio untuk meningkatkan skill dan membuat aset pada game, sekaligus untuk mendapatkan penghasilan.</h3>
+        </div>
+                <!-- Galeri -->
+        <div class="galeri-wrapper2">
+
+          <button class="galeri-btn2 galeri-btn-kiri2" onclick="geserGaleri1(-1)">
+            <span class="panah2">‹</span>
+          </button>
+
+          <button class="galeri-btn2 galeri-btn-kanan2" onclick="geserGaleri1(1)">
+            <span class="panah2">›</span>
+          </button>
+
+          <div class="galeri-track2" id="galeriTrack2">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-3309a2fb-2574-4418-aff9-179139bec831.png" alt="Gambar 1" class="galeri-img1" data-index="0">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-e9a2121f-ff56-4a33-8d9b-5615cf83d00b.png" alt="Gambar 2" class="galeri-img1" data-index="1">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-ed892b4f-9580-43ab-b885-213bbc76d20d.png" alt="Gambar 3" class="galeri-img1" data-index="2">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-58f5a218-28ef-41b1-875e-e2b1ebf75a4c.png" alt="Gambar 4" class="galeri-img1" data-index="3">
+            <img src="https://img.sanishtech.com/u/5f79f79f9cc0f4b320326b2e64cc7e66.png" alt="Gambar 5" class="galeri-img1" data-index="4">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-dc46cd79-9b62-4d01-80c4-113a4b515950.png" alt="Gambar 6" class="galeri-img1" data-index="5">
+            <img src="https://cdn.phototourl.com/member/2026-10-18-5e418d23-e65a-4025-8988-6dd63813f90d.png" alt="Gambar 7" class="galeri-img1" data-index="6">
+            <img src="https://cdn.phototourl.com/member/2026-10-19-0f54b715-224f-4fca-87bc-2e004e06fe0d.png" alt="Gambar 8" class="galeri-img1" data-index="7">
+          </div>
+
+        </div>
+        <div class="bayangan2"></div>
+        </div>
+      </div>
+      <!--Kotak akhir 2-->
+
+     
+      
+  </section>
+
+
+</body>
+      <script>
+    let indeksAktif1 = 0;
+    const gambar1 = document.querySelectorAll('.galeri-img1');
+    const track1 = document.getElementById('galeriTrack1');
+    const wadah1 = document.querySelector('.galeri-wrapper1');
+    const kotak1 = document.querySelector('.kotak1');
+
+    function perbaruiGaleri1() {
+
+      gambar1.forEach((img, i) => {
+        img.classList.toggle('aktif', i === indeksAktif1);
+      });
+
+      const gambarAktif = gambar1[indeksAktif1];
+      const rectGambar = gambarAktif.getBoundingClientRect();
+      const rectKotak = kotak1.getBoundingClientRect();
+
+      const posisiGambarDiKotak = rectGambar.left - rectKotak.left;
+
+      const lebarKotak = rectKotak.width;
+      const lebarGambar = rectGambar.width;
+
+      const geser = posisiGambarDiKotak - (lebarKotak / 2) + (lebarGambar / 2);
+
+      const transformSekarang = new DOMMatrix(getComputedStyle(track1).transform);
+      const translateSekarang = transformSekarang.m41;
+
+      track1.style.transform = `translateX(${translateSekarang - geser}px)`;
+    }
+
+    function geserGaleri1(arah) {
+      indeksAktif1 += arah;
+      if (indeksAktif1 < 0) indeksAktif1 = 0;
+      if (indeksAktif1 >= gambar1.length) indeksAktif1 = gambar1.length - 1;
+      perbaruiGaleri1();
+    }
+
+    window.addEventListener('load', perbaruiGaleri1);
+
+    if (window.ResizeObserver) {
+      const observer = new ResizeObserver(() => {
+        perbaruiGaleri1();
+      });
+      observer.observe(kotak1);
+    } else {
+      // Fallback untuk browser lama
+      window.addEventListener('resize', perbaruiGaleri1);
+    }
+  </script>
+</html>
