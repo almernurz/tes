@@ -392,8 +392,8 @@ body {
   cursor: pointer;
   z-index: 20;
   display: flex;
-  padding-left: 15px;
-  padding-top: -15px;
+  padding-left: 20px;
+  padding-top: -25px;
   transition: background 0.2s;
 }
 
