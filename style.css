@@ -317,19 +317,19 @@ body {
 /* // TAMBAHAN: bayangan memudar di bawah kotak */
 .bayangan1 {
   position: absolute;
-  left: 0px;                  /* sejajar dengan padding kiri kotak */
-  right: 0px;                 /* sejajar dengan padding kanan kotak */
-  bottom: 1060px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
-  height: 620px;               /* tinggi bayangan */
+  left: 0px;                 
+  right: 0px;                
+  bottom: 1060px;               
+  height: 620px;               
   background: linear-gradient(
     to bottom,
-    rgba(17, 17, 17, 0) 0%,       /* atas transparan */
+    rgba(17, 17, 17, 0) 0%,   
     rgba(17, 17, 17, 0.7) 15%, 
     rgba(12, 12, 12, 1) 35%, 
     rgba(12, 12, 12, 1) 50%,  
-    rgba(12, 12, 12, 1) 65%,   /* tengah gelap pekat */
+    rgba(12, 12, 12, 1) 65%,   
     rgba(17, 17, 17, 0.7) 85%, 
-    rgba(17, 17, 17, 0) 100%     /* bawah transparan */
+    rgba(17, 17, 17, 0) 100%    
   );
   pointer-events: none;
   border-radius: 8px;
@@ -354,43 +354,40 @@ body {
 .galeri-track1 {
   position: relative; 
   display: flex;
-  gap: 5px;                   /* jarak antar gambar, bisa diatur */
-  transition: transform 0.5s linear;  /* animasi smooth dan linear */
+  gap: 5px;                   
+  transition: transform 0.5s linear;  
   will-change: transform;
-  align-items: center;         /* gambar sejajar tengah vertikal */
+  align-items: center;         
 }
 
-/* ===== GAMBAR DI DALAM GALERI ===== */
 .galeri-img1 {
-  width: 700px;                /* ukuran dasar gambar */
+  width: 700px;               
   height: 394px;
   object-fit: cover;
   flex-shrink: 0;
   transition: transform 0.5s linear, opacity 0.5s linear;
-  opacity: 0.5;                /* default: redup */
-  transform: scale(0.5);       /* default: kecil */
+  opacity: 0.5;                
+  transform: scale(0.5);      
 }
 
-/* Gambar yang di tengah: besar dan jelas */
 .galeri-img1.aktif {
   opacity: 1;
   transform: scale(1);
-  box-shadow: 0 0 35px rgb(252, 252, 252);  /* efek highlight */
+  box-shadow: 0 0 35px rgb(252, 252, 252); 
   z-index: 5;
 }
 
-/* ===== TOMBOL KIRI-KANAN ===== */
 .galeri-btn1 {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 0px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   z-index: 20;
   display: flex;
@@ -400,7 +397,7 @@ body {
 }
 
 .galeri-btn1:hover {
-  background: rgba(0, 255, 255, 0.7);
+  background: rgb(250, 250, 250);
   color: #000;
 }
 
@@ -457,22 +454,22 @@ body {
   margin-bottom: 15px;
   word-wrap: break-word;      
 }
-/* // TAMBAHAN: bayangan memudar di bawah kotak */
+
 .bayangan2 {
   position: absolute;
-  left: 0px;                  /* sejajar dengan padding kiri kotak */
-  right: 0px;                 /* sejajar dengan padding kanan kotak */
-  bottom: 50px;               /* jarak dari bawah kotak, taruh di tengah ruang kosong */
-  height: 620px;               /* tinggi bayangan */
+  left: 0px;                  
+  right: 0px;                
+  bottom: 50px;               
+  height: 620px;               
   background: linear-gradient(
     to bottom,
-    rgba(17, 17, 17, 0) 0%,       /* atas transparan */
+    rgba(17, 17, 17, 0) 0%,       
     rgba(17, 17, 17, 0.7) 15%, 
     rgba(12, 12, 12, 1) 35%, 
     rgba(12, 12, 12, 1) 50%,  
-    rgba(12, 12, 12, 1) 65%,   /* tengah gelap pekat */
+    rgba(12, 12, 12, 1) 65%,  
     rgba(17, 17, 17, 0.7) 85%, 
-    rgba(17, 17, 17, 0) 100%     /* bawah transparan */
+    rgba(17, 17, 17, 0) 100%     
   );
   pointer-events: none;
   border-radius: 8px;
@@ -489,8 +486,8 @@ body {
   }
   
   .trapesium {
-    right: 0px;             /* posisi trapesium di HP */
-    width: 180px;            /* lebih kecil, cuma ada tombol ☰ */
+    right: 0px;             
+    width: 180px;           
     height: 50px;
     justify-content: center;
   }
@@ -513,9 +510,9 @@ body {
   .menu-dropdown {
     display: block;
     position: absolute;
-    bottom: -50px;            /* sejajar dengan posisi trapesium */
+    bottom: -50px;            
     right: 0;
-    width: 180px;             /* sama dengan lebar trapesium di HP */
+    width: 180px;             
     height: 50px;
     z-index: 50;
   }
@@ -528,7 +525,7 @@ body {
   .pp-wrapper {
     left: 20px;
     bottom: -250px;
-    flex-direction: row;     /* // tetap row di HP */
+    flex-direction: row;     
     gap: 10px;
   }
 
@@ -554,9 +551,9 @@ body {
 
 
   .deskripsi {
-    padding: 200px 20px 40px;   /* atas 30px, kiri-kanan 20px, bawah 40px */
-    margin: 0;                 /* // timpa margin 80px dari aturan utama */
-    max-width: 100%;           /* // biar lebar penuh di HP */
+    padding: 200px 20px 40px;  
+    margin: 0;                
+    max-width: 100%;          
     text-align: left;
   }
 
@@ -571,7 +568,7 @@ body {
   }
 
   .border {
-    height: 40px;             /* bayangan lebih pendek di HP */
+    height: 40px;             
   }
 
   .isi h2 {
@@ -579,7 +576,7 @@ body {
   }
 
   .kotak {
-    flex-direction: row;       /* // tetap row di HP */
+    flex-direction: row;      
     padding: 20px;
     gap: 15px;
   }
