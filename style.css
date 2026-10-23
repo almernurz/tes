@@ -573,9 +573,43 @@ body {
   right: 5px;
 }
 /* ==Galeri 2 akhir */
-/* ==kotak 2 */
+/* ==kotak 2 akhir */
 /* ==kotak akhir */
 /* ==Page 2 akhir */
+
+/* ==Page 3 awal */
+.halaman3 {
+  position: relative;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 200px 170px 200px;
+  margin-top: 0;
+}
+
+.border1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isi1 {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;           
+  margin-left: 0;           
+  text-align: left;
+}
+
 
 /* ===== RESPONSIF: HP ===== */
 @media (max-width: 560px) {
