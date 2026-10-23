@@ -622,7 +622,7 @@ body {
 /*Kotak 1 awal*/
 .KotakGJ{
   width: 100%;
-  background: #e4a206;
+  background: #af640a;
   border: 2px solid #4d4d4d;
   border-radius: 12px;
   padding: 40px 30px 100px 30px;
@@ -640,10 +640,10 @@ body {
 .backgroundgambar{
   position: absolute;
   bottom: -30;
-  left: 0px;
+  left: 50px;
   width: 100px;
   height: 70px;
-  background: #000;
+  background: #c9740d;
   clip-path: polygon(
     15% 0,
     100% 0,
@@ -657,8 +657,8 @@ body {
 }
 
 .GJ{
- width: 50px;
- height: 50px;
+ width: 100px;
+ height: 100px;
  border: 10px;
 }
 /*Kotak 1 awal*/
