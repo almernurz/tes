@@ -621,41 +621,33 @@ body {
 
 /*Kotak 1 awal*/
 .KotakGJ {
-  position: relative;          
-  width: 100%;
+  position: relative;
+  width: 600px;
+  height: 300px;
   background: #af640a;
   border: 2px solid #4d4d4d;
   border-radius: 12px;
-  padding: 40px 30px 40px 30px;
   margin-top: 40px;
   margin-bottom: 20px;
   color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-
-  display: flex;
-  align-items: stretch;
-  gap: 30px;
   overflow: hidden;
 }
 
 .backgroundgambar {
   position: absolute;
-  bottom: 0;                  
-  left: 0;                    
-  width: 200px;                
-  height: 150px;               
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 40%;
   background: #c9740d;
-  z-index: 1;                  
-
   clip-path: polygon(
-    0 0,                       
-    100% 0,                   
-    70% 100%,                  
-    0 100%                     
+    0 0,
+    100% 0,
+    70% 100%,
+    0 100%
   );
-
-
-  filter: drop-shadow(-6px 6px 10px rgba(0, 0, 0, 0.7));
+  z-index: 1;
 }
 
 .GJ {
@@ -664,7 +656,8 @@ body {
   object-fit: cover;
   border-radius: 10px;
   position: relative;
-  z-index: 2;                  
+  z-index: 2;
+  margin: 20px;
 }
 /*Kotak 1 awal*/
 
