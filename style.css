@@ -626,7 +626,7 @@ body {
   background: #af640a;
   border: 2px solid #4d4d4d;
   border-radius: 12px;
-  padding: 40px 30px 10px 30px;
+  padding: 40px 30px 40px 30px;
   margin-top: 40px;
   margin-bottom: 20px;
   color: #fff;
@@ -643,7 +643,7 @@ body {
   bottom: 0;                  
   left: 0;                    
   width: 200px;                
-  height: 120px;               
+  height: 150px;               
   background: #c9740d;
   z-index: 1;                  
 
