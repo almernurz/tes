@@ -636,10 +636,11 @@ body {
 
 .backgroundgambar {
   position: absolute;
+  top: 0;
   bottom: 0;
-  right: 0;
+  left: 0;
   width: 40%;
-  height: 40%;
+  height: 100%;
   background: #c9740d;
   clip-path: polygon(
     0 0,
@@ -648,6 +649,7 @@ body {
     0 100%
   );
   z-index: 1;
+  filter: drop-shadow(6px 0 10px rgba(0, 0, 0, 0.7));
 }
 
 .GJ {
