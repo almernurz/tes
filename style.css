@@ -581,7 +581,7 @@ body {
 .halaman3 {
   position: relative;
   width: 100%;
-  background: #0a0a0a;
+  background: #000000;
   padding: 200px 170px 200px;
   margin-top: 0;
 }
@@ -591,7 +591,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 80px;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.0) 0%,
@@ -626,13 +626,13 @@ body {
   height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background: #b86705;
+  background: #8a4f07;
   border: 5px solid #ab650f;
   border-radius: 12px;
   margin-top: 40px;
   margin-bottom: 20px;
   color: #fff;
-  box-shadow: 0 0px 50px rgba(208, 123, 4, 0.5);
+  box-shadow: 0 0px 60px rgba(208, 123, 4, 0.5);
   overflow: hidden;
 }
 
@@ -643,7 +643,7 @@ body {
   left: 0;
   width: 40%;
   height: 100%;
-  background: #8a4f07;
+  background: #b86705;
   clip-path: polygon(
     0 0,
     100% 0,
