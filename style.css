@@ -650,7 +650,7 @@ body {
     0 100%
   );
   z-index: 1;
-  filter: drop-shadow(6px 0 10px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(20px 0 10px rgba(0, 0, 0, 1));
 }
 
 .GJ {
