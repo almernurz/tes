@@ -622,7 +622,7 @@ body {
 .KotakGJ {
   position: relative;
   width: 1200px;
-  height: 350px;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
   background: #9e5b09;
@@ -663,6 +663,33 @@ body {
   margin-left: 20px;
   margin: 20px;
   align-self: center;
+}
+
+.isiGJ{
+  flex: 1;                    
+  max-width: 100%;              
+  border-radius: 8px;
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    
+  overflow: hidden;  
+}
+
+.h4{
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 75px;
+  line-height: 1;            
+  letter-spacing: 3px;
+}
+
+.h5{
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 75px;
+  line-height: 1;            
+  letter-spacing: 3px;
 }
 /*Kotak 1 awal*/
 
