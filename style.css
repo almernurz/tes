@@ -596,7 +596,7 @@ body {
 .halaman3 {
   position: relative;
   width: 100%;
-  background: #212121;
+  background: #010101;
   padding: 200px 170px 200px;
   margin-top: 0;
 }
@@ -626,7 +626,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background: #8a4f07;
-  border: 5px solid #ab650f;
+  border: 5px solid #d8d8d8;
   border-radius: 12px;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -660,6 +660,7 @@ body {
   border-radius: 10px;
   position: relative;
   z-index: 2;
+  margin-left: 20px;
   margin: 20px;
   align-self: center;
 }
