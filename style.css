@@ -666,30 +666,25 @@ body {
 }
 
 .isiGJ{
-  flex: 1;                    
-  max-width: 100%;              
-  border-radius: 8px;
-  padding:20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;    
-  overflow: hidden;  
+  flex-direction: column;      /* // teks atas-bawah */
+  justify-content: center;     /* // teks di tengah vertikal kotak */
+  gap: 10px;                   /* // jarak antar teks */
+  margin-left: 20px;           /* // jarak dari gambar */
+  position: relative;
+  z-index: 2;                  /* // di atas trapesium */
 }
 
-.isiGJ h4 {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 75px;
-  line-height: 1;            
-  letter-spacing: 3px;
+.atas {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
 }
 
-.isiGJ h5 {
+.bawah {
   font-size: 1rem;
-  color: #ffffff;
-  margin-bottom: 75px;
-  line-height: 1;            
-  letter-spacing: 3px;
+  color: #fff;
+  margin: 0;
 }
 /*Kotak 1 awal*/
 
