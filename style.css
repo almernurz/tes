@@ -667,12 +667,14 @@ body {
 
 .isiGJ {
   display: flex;
-  flex-direction: column;      /* // teks atas-bawah */
-  justify-content: center;     /* // teks di tengah vertikal kotak */
-  gap: 10px;                   /* // jarak antar teks */
-  margin-left: 200px;           /* // jarak dari gambar */
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 20px;           /* // diperbaiki: dari 200px jadi 20px */
   position: relative;
-  z-index: 2;                  /* // di atas trapesium */
+  z-index: 2;
+  flex: 1;                     /* // isi sisa ruang setelah gambar */
+  overflow: hidden;            /* // teks tidak keluar dari kotak */
 }
 
 .atas {
