@@ -623,14 +623,16 @@ body {
 .KotakGJ {
   position: relative;
   width: 1300px;
-  height: 300px;
-  background: #af640a;
-  border: 2px solid #4d4d4d;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #a35c05;
+  border: 2px solid #ab650f;
   border-radius: 12px;
   margin-top: 40px;
   margin-bottom: 20px;
   color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(208, 123, 4, 0.5);
   overflow: hidden;
 }
 
@@ -641,7 +643,7 @@ body {
   left: 0;
   width: 40%;
   height: 100%;
-  background: #c9740d;
+  background: #a86009;
   clip-path: polygon(
     0 0,
     100% 0,
@@ -660,6 +662,7 @@ body {
   position: relative;
   z-index: 2;
   margin: 20px;
+  align-self: center;
 }
 /*Kotak 1 awal*/
 
