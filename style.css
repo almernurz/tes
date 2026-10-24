@@ -665,7 +665,7 @@ body {
   align-self: center;
 }
 
-.isiGJ{
+.isiGJ {
   display: flex;
   flex-direction: column;      /* // teks atas-bawah */
   justify-content: center;     /* // teks di tengah vertikal kotak */
