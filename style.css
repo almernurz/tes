@@ -620,6 +620,8 @@ body {
 
 /*Kotak 1 awal*/
 .KotakGJ {
+  display: flex;               /* // WAJIB: supaya isiGJ di samping gambar */
+  align-items: center;
   position: relative;
   width: 1200px;
   height: 300px;
