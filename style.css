@@ -670,7 +670,7 @@ body {
   flex-direction: column;      /* // teks atas-bawah */
   justify-content: center;     /* // teks di tengah vertikal kotak */
   gap: 10px;                   /* // jarak antar teks */
-  margin-left: 20px;           /* // jarak dari gambar */
+  margin-left: 200px;           /* // jarak dari gambar */
   position: relative;
   z-index: 2;                  /* // di atas trapesium */
 }
