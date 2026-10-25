@@ -168,14 +168,15 @@
         <p class="atas">❖ Bazoooka Chef ❖</p>
         <p class="bawah">Game Jam Internal PENS 2026</p>
 
-        <button class="tombol-panah" onclick="toggleKotakBaru()">
-        <span class="panah">▼</span>
-      </button>
+        <button class="tombol-panah" onclick="toggleLaci()">
+           <span class="panah">▼</span>
+        </button>
+
       </div>
-     
-      <div class="kotak-baru" id="kotakBaru">
-      <p>Isi kotak baru. Bisa teks, gambar, atau apa saja.</p>
-    </div>
+
+     <div class="kotak-laci" id="kotakLaci">
+        <p>Isi kotak baru. Bisa teks, gambar, atau apa saja.</p>
+     </div>
       
     </div>
 
@@ -285,12 +286,12 @@
 
   <script>
     //laci 1 awal
-    function toggleKotakBaru() {
+    function toggleLaci() {
       const tombol = document.querySelector('.tombol-panah');
-      const kotakBaru = document.getElementById('kotakBaru');
+      const laci = document.getElementById('kotakLaci');
 
       tombol.classList.toggle('terbuka');
-      kotakBaru.classList.toggle('terbuka');
+      laci.classList.toggle('terbuka');
     }
     //laci 1 akhir
   </script>
