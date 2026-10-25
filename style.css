@@ -716,6 +716,7 @@ body {
 .laci {
   display: grid;
   grid-template-rows: 0fr;
+  overflow: hidden;
   transition: grid-template-rows 0.4s ease;
 }
 .wrapGJ.buka .laci {
