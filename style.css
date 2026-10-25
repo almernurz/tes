@@ -692,35 +692,40 @@ body {
   color: #fff;
   margin: 0;
 }
-/* wrapper: lebar mengikuti kotak GJ */
+
 .wrapGJ {
   position: relative;
   width: fit-content;
   margin: 40px auto 40px;
 }
 
-/* margin dipindah ke wrapper, glow bisa hilang dengan halus */
+
+/* KotakGJ: glow bawah dipotong saat laci terbuka, atas dan samping tetap */
 .wrapGJ .KotakGJ {
   margin: 0;
-  transition: box-shadow 0.4s ease, border-radius 0.4s ease;
+  z-index: 2;
+  clip-path: inset(-100px -100px -100px -100px);
+  transition: clip-path 0.4s ease, border-radius 0.4s ease;
 }
-
-/* saat laci terbuka: glow hilang, sudut bawah menyatu dengan laci */
 .wrapGJ.buka .KotakGJ {
-  box-shadow: none;
+  clip-path: inset(-100px -100px 0 -100px);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-/* laci: tinggi menyesuaikan isi */
+/* laci: naik 20px masuk ke bawah KotakGJ supaya tidak ada patahan */
 .laci {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-rows: 0fr;
-  overflow: hidden;
-  transition: grid-template-rows 0.4s ease;
+  margin-top: 0;
+  clip-path: inset(0 -100px -100px -100px);
+  transition: grid-template-rows 0.4s ease, margin-top 0.4s ease;
 }
 .wrapGJ.buka .laci {
   grid-template-rows: 1fr;
+  margin-top: -20px;
 }
 
 .isi-laci {
@@ -732,11 +737,13 @@ body {
   border: 0 solid #d37a0e;
   border-radius: 0 0 12px 12px;
   padding: 0 20px;
-  transition: padding 0.4s ease;
+  box-shadow: 0 0 0 rgba(208, 123, 4, 0);
+  transition: padding 0.4s ease, box-shadow 0.4s ease;
 }
 .wrapGJ.buka .isi-laci {
   border-width: 0 5px 5px 5px;
-  padding: 20px;
+  padding: 40px 20px 20px; /* 20px atas dipakai untuk bagian yang tertutup KotakGJ */
+  box-shadow: 0 0 60px rgba(208, 123, 4, 0.9);
 }
 
 /* tombol panah: nempel di tepi bawah wrapper, jadi ikut turun */
