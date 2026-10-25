@@ -693,82 +693,71 @@ body {
   margin: 0;
 }
 
-/* ===== WRAPPER ===== */
+/* ===== WRAPPER (Lebar sama dengan KotakGJ) ===== */
 .wrapper-laci {
-  width: 1200px;               /* sama dengan lebar KotakGJ */
+  position: relative;
+  width: 1200px;
   margin: 0 auto;
-  position: relative;
-}
-
-/* ===== GRUP LACI ===== */
-.grup-laci {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -25px;           /* Menarik grup ke atas agar tombol menempel di KotakGJ */
-  position: relative;
-  z-index: 10;                 /* Di atas KotakGJ */
-}
-
-/* ===== TOMBOL PANAH (Cekungan) ===== */
-.tombol-panah {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: #d37a0e;         /* Warna panah (oranye) */
-  border: none;
-  border-radius: 0 0 10px 10px;/* Lengkungan di bawah */
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;       /* Panah ditaruh di bawah */
-  padding-bottom: 10px;
-  z-index: 2;
-}
-
-/* Segitiga hitam untuk menutupi bagian atas tombol (bikin efek cekungan) */
-.segitiga-atas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #9e5b09;         /* Warna ini HARUS SAMA dengan background KotakGJ */
-  clip-path: polygon(0 0, 100% 0, 50% 60%); /* Membentuk segitiga ke bawah */
-  z-index: -1;
-}
-
-.panah {
-  font-size: 1.5rem;
-  color: #fff;
-  display: inline-block;
-  transition: transform 0.4s ease;
 }
 
 /* ===== KOTAK BARU ===== */
 .kotak-baru {
   width: 100%;
-  max-height: 0;
+  max-height: 0;                /* Awalnya tinggi 0 */
   overflow: hidden;
-  background: #9e5b09;         /* Warna sama dengan KotakGJ */
-  border: 5px solid #d37a0e;   /* Border oranye */
+  background: #9e5b09;
+  border: 5px solid #d37a0e;
+  border-top: none;             /* Atasnya nyatu sama KotakGJ */
   border-radius: 0 0 12px 12px;
   color: #fff;
   box-shadow: 0 0px 60px rgba(208, 123, 4, 0.9);
   transition: max-height 0.4s ease, padding 0.4s ease;
-  margin-top: -5px;            /* Menutupi celah border tombol */
-  z-index: 1;
   padding: 0 30px;
 }
 
-.kotak-baru p {
-  margin: 20px 0;
-}
-
-/* ===== SAAT TERBUKA ===== */
+/* Saat dibuka, kotak memanjang ke bawah */
 .kotak-baru.terbuka {
   max-height: 500px;
   padding: 30px;
+}
+
+.isi-kotak-baru p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* ===== TOMBOL PANAH ===== */
+.tombol-panah {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 40px;
+  background: #d37a0e;
+  border: none;
+  border-radius: 0 0 25px 25px; /* Lengkungan di bawah */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: top 0.4s ease;    /* Animasi saat pindah posisi */
+}
+
+/* Posisi Awal: Menempel di bawah KotakGJ (KotakGJ tingginya 300px) */
+.tombol-panah {
+  top: 295px;                   /* Sedikit naik agar menempel */
+}
+
+/* Saat Terbuka: Pindah ke bawah Kotak Baru */
+.tombol-panah.terbuka {
+  top: 490px;                   /* 295px + tinggi kotak baru (kurang lebih 195px) */
+}
+
+.panah {
+  font-size: 1.2rem;
+  color: #fff;
+  transition: transform 0.4s ease;
 }
 
 /* Saat terbuka, panah berputar ke atas */
