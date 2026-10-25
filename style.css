@@ -698,28 +698,30 @@ body {
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  overflow: hidden;             /* // menyembunyikan laci dan panah saat tertutup */
+  overflow: hidden;             /* // memotong grup laci saat tersembunyi */
 }
 
-/* ===== KOTAK LACI ===== */
+/* ===== GRUP LACI: kotak baru + panah ===== */
+.grup-laci {
+  position: relative;
+  z-index: 1;                   /* // di bawah KotakGJ */
+  transform: translateY(-100%); /* // naik ke atas, tersembunyi di belakang KotakGJ */
+  transition: transform 0.4s ease;
+}
+
+.grup-laci.terbuka {
+  transform: translateY(0);     /* // turun, muncul di bawah KotakGJ */
+}
+
+/* ===== KOTAK BARU ===== */
 .kotak-laci {
-  width: 100%;
-  max-height: 0;
-  overflow: hidden;
+  width: 100%;                  /* // lebar sama dengan wrapper = sama dengan KotakGJ */
   background: #9e5b09;
   border: 5px solid #d37a0e;
   border-radius: 12px;
   color: #fff;
   box-shadow: 0 0px 60px rgba(208, 123, 4, 0.9);
-  padding: 0 30px;
-  margin-top: 0;
-  transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
-}
-
-.kotak-laci.terbuka {
-  max-height: 500px;
   padding: 30px;
-  margin-top: 20px;
 }
 
 /* ===== TOMBOL PANAH ===== */
@@ -732,7 +734,6 @@ body {
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.4s ease;
 }
 
 .panah {
@@ -742,7 +743,7 @@ body {
   transition: transform 0.4s ease;
 }
 
-.tombol-panah.terbuka .panah {
+.grup-laci.terbuka .panah {
   transform: rotate(180deg);
 }
 /*Kotak 1 awal*/
