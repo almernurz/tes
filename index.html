@@ -158,30 +158,25 @@
     <div class="isi1">
       <h3>Project</h3>
     </div>
-       <div class="wrapper-laci">
-
-      <!-- KOTAKGJ ASLI KAMU (JANGAN DIUBAH) -->
-      <div class="KotakGJ">
-        <div class="backgroundgambar"></div>
-        <img src="https:png" alt="GJ" class="GJ">
-        <div class="isiGJ">
-          <p class="atas">asd</p>
-          <p class="bawah">asd</p>
-        </div>
+    <!--kotak 1 awal-->
+    <div class="KotakGJ">
+      <div class="backgroundgambar"></div>
+      <img src="https://cdn.phototourl.com/member/2026-10-24-45cb2c34-b37c-440a-8818-9de3691e4a4a.png"
+      alt="GJ"
+      class="GJ">
+      <div class="isiGJ">
+        <p class="atas">❖ Bazoooka Chef ❖</p>
+        <p class="bawah">Game Jam Internal PENS 2026</p>
       </div>
-
-      <!-- KOTAK BARU (Awalnya tinggi 0, tidak terlihat) -->
-      <div class="kotak-baru" id="kotakBaru">
-        <div class="isi-kotak-baru">
-          <p>Ini isi kotak baru. Bisa teks, gambar, dll.</p>
-        </div>
-      </div>
-
-      <!-- TOMBOL PANAH (Bisa pindah posisi pakai CSS) -->
-      <button class="tombol-panah" onclick="bukaLaci()">
-        <span class="panah">▼</span>
+     
+      <button class="tombol-laci" onclick="toggleLaci()">
+        <span class="panah-laci">▼</span>
       </button>
 
+    
+      <div class="laci" id="laci">
+       <p>Isi laci. Bisa teks, gambar, atau apa saja.</p>
+      </div>
     </div>
 
   </section>
@@ -285,19 +280,11 @@
     } else {
       window.addEventListener('resize', perbaruiGaleri2);
     }
-     //Galeri 2 awal
   </script>
 
   <script>
-    //laci 1 awal
-    function bukaLaci() {
-      const tombol = document.querySelector('.tombol-panah');
-      const kotak = document.getElementById('kotakBaru');
-
-      // Tambah/hapus class 'terbuka'
-      tombol.classList.toggle('terbuka');
-      kotak.classList.toggle('terbuka');
-    }
-    //laci 1 akhir
-  </script>
+  function toggleLaci() {
+    document.getElementById('wrapGJ').classList.toggle('buka');
+  }
+</script>
 </html>
