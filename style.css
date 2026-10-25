@@ -620,7 +620,7 @@ body {
 
 /*Kotak 1 awal*/
 .KotakGJ {
-  display: flex;               /* // WAJIB: supaya isiGJ di samping gambar */
+  display: flex;             
   align-items: center;
   position: relative;
   width: 1200px;
@@ -640,7 +640,7 @@ body {
 /* ===== TOMBOL PANAH DI DALAM KotakGJ ===== */
 .tombol-panah {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: #d37a0e;
@@ -666,8 +666,8 @@ body {
   transform: rotate(180deg);
 }
 
-/* ===== KOTAK BARU DI BAWAH KotakGJ ===== */
-.kotak-baru {
+/* ===== KOTAK LACI DI BAWAH KotakGJ ===== */
+.kotak-laci {
   width: 1200px;
   max-height: 0;
   overflow: hidden;
@@ -681,7 +681,7 @@ body {
   padding: 0 30px;
 }
 
-.kotak-baru.terbuka {
+.kotak-laci.terbuka {
   max-height: 500px;
   padding: 30px;
   margin-top: 20px;
