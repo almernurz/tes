@@ -168,12 +168,22 @@
         <p class="atas">❖ Bazoooka Chef ❖</p>
         <p class="bawah">Game Jam Internal PENS 2026</p>
       </div>
+     
+      <button class="tombol-laci" onclick="toggleLaci()">
+        <span class="panah-laci">▼</span>
+      </button>
+
+    
+      <div class="laci" id="laci">
+       <p>Isi laci. Bisa teks, gambar, atau apa saja.</p>
+      </div>
     </div>
+
   </section>
   <!--Page 3 akhir-->
 
 </body>
-      <script>
+  <script>
     //Galeri 1 awal
     let indeksAktif1 = 0;
     const gambar1 = document.querySelectorAll('.galeri-img1');
@@ -270,5 +280,15 @@
     } else {
       window.addEventListener('resize', perbaruiGaleri2);
     }
+     //Galeri 2 awal
+  </script>
+
+  <script>
+    //laci 1 awal
+    function toggleLaci() {
+      const kotak = document.querySelector('.KotakGJ');
+      kotak.classList.toggle('terbuka');
+    }
+    //laci 1 akhir
   </script>
 </html>
