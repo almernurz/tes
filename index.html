@@ -158,8 +158,9 @@
     <div class="isi1">
       <h3>Project</h3>
     </div>
-        <div class="wrapper-laci">
+          <div class="wrapper-laci">
 
+      <!-- KotakGJ asli, tidak diubah sama sekali -->
       <div class="KotakGJ">
         <div class="backgroundgambar"></div>
         <img src="https:png" alt="GJ" class="GJ">
@@ -169,17 +170,16 @@
         </div>
       </div>
 
-      <div class="grup-laci" id="grupLaci">
-
-        <div class="kotak-laci">
+      <!-- Kotak baru: di bawah KotakGJ, awalnya tinggi 0 -->
+      <div class="kotak-laci" id="kotakLaci">
+        <div class="isi-laci">
           <p>Isi kotak baru. Bisa teks, gambar, atau apa saja.</p>
         </div>
 
-
+        <!-- Panah di dalam kotak baru, di paling bawah -->
         <button class="tombol-panah" onclick="toggleLaci()">
           <span class="panah">▼</span>
         </button>
-
       </div>
 
     </div>
@@ -292,8 +292,8 @@
   <script>
     //laci 1 awal
     function toggleLaci() {
-      const grup = document.getElementById('grupLaci');
-      grup.classList.toggle('terbuka');
+      const laci = document.getElementById('kotakLaci');
+      laci.classList.toggle('terbuka');
     }
     //laci 1 akhir
   </script>
