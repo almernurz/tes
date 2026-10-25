@@ -620,7 +620,7 @@ body {
 
 /*Kotak 1 awal*/
 .KotakGJ {
-  display: flex;
+  display: flex;               
   align-items: center;
   position: relative;
   width: 1200px;
@@ -635,12 +635,56 @@ body {
   color: #fff;
   box-shadow: 0 0px 60px rgba(208, 123, 4, 0.9);
   overflow: hidden;
-  transition: height 0.4s ease;  
 }
 
 
-.KotakGJ.terbuka {
-  height: 600px;                  
+.tombol-panah {
+  display: block;
+  margin: 0 auto;             
+  background: #d37a0e;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.panah {
+  font-size: 1.5rem;
+  color: #fff;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.tombol-panah.terbuka .panah {
+  transform: rotate(180deg);
+}
+
+
+.kotak-baru {
+  width: 1200px;                
+  max-height: 0;               
+  overflow: hidden;
+  margin: 0 auto;
+  background: #9e5b09;
+  border: 5px solid #d37a0e;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 0px 60px rgba(208, 123, 4, 0.9);
+  transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+  padding: 0 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.kotak-baru.terbuka {
+  max-height: 500px;            
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .backgroundgambar {
@@ -651,7 +695,12 @@ body {
   width: 40%;
   height: 100%;
   background: #d37a0e;
-  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    70% 100%,
+    0 100%
+  );
   z-index: 1;
   filter: drop-shadow(20px 0 10px rgba(0, 0, 0, 1));
 }
@@ -663,6 +712,7 @@ body {
   border-radius: 10px;
   position: relative;
   z-index: 2;
+  margin-left: 20px;
   margin: 20px;
   align-self: center;
 }
@@ -672,11 +722,11 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  margin-left: 200px;
+  margin-left: 200px;          
   position: relative;
   z-index: 2;
-  flex: 1;
-  overflow: hidden;
+  flex: 1;                     
+  overflow: hidden;            
 }
 
 .atas {
@@ -691,56 +741,6 @@ body {
   font-weight: bold;
   color: #fff;
   margin: 0;
-}
-
-
-.tombol-laci {
-  position: absolute;
-  bottom: 10px;                 
-  left: 50%;                    
-  transform: translateX(-50%);
-  background: #d37a0e;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.4s ease;
-}
-
-.panah-laci {
-  font-size: 1.5rem;
-  color: #fff;
-  transition: transform 0.4s ease;
-}
-
-
-.KotakGJ.terbuka .panah-laci {
-  transform: rotate(180deg);
-}
-
-.laci {
-  position: absolute;
-  top: 100%;                    
-  left: 0;
-  width: 100%;
-  height: 300px;                
-  background: #7a4507;
-  border-radius: 0 0 12px 12px;
-  padding: 20px;
-  transform: translateY(-100%);   
-  transition: transform 0.4s ease;
-  z-index: 5;
-  overflow: hidden;
-}
-
-/* Saat terbuka, laci turun */
-.KotakGJ.terbuka .laci {
-  transform: translateY(0);
 }
 /*Kotak 1 awal*/
 
