@@ -692,78 +692,76 @@ body {
   color: #fff;
   margin: 0;
 }
-
-/* ===== WRAPPER (Lebar sama dengan KotakGJ) ===== */
-.wrapper-laci {
+/* wrapper: lebar mengikuti kotak GJ */
+.wrapGJ {
   position: relative;
-  width: 1200px;
-  margin: 0 auto;
+  width: fit-content;
+  margin: 40px auto 40px;
 }
 
-/* ===== KOTAK BARU ===== */
-.kotak-baru {
-  width: 100%;
-  max-height: 0;                /* Awalnya tinggi 0 */
-  overflow: hidden;
-  background: #9e5b09;
-  border: 5px solid #d37a0e;
-  border-top: none;             /* Atasnya nyatu sama KotakGJ */
-  border-radius: 0 0 12px 12px;
-  color: #fff;
-  box-shadow: 0 0px 60px rgba(208, 123, 4, 0.9);
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0 30px;
-}
-
-/* Saat dibuka, kotak memanjang ke bawah */
-.kotak-baru.terbuka {
-  max-height: 500px;
-  padding: 30px;
-}
-
-.isi-kotak-baru p {
+/* margin dipindah ke wrapper, glow bisa hilang dengan halus */
+.wrapGJ .KotakGJ {
   margin: 0;
-  font-size: 1.2rem;
+  transition: box-shadow 0.4s ease, border-radius 0.4s ease;
 }
 
-/* ===== TOMBOL PANAH ===== */
-.tombol-panah {
+/* saat laci terbuka: glow hilang, sudut bawah menyatu dengan laci */
+.wrapGJ.buka .KotakGJ {
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* laci: tinggi menyesuaikan isi */
+.laci {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
+}
+.wrapGJ.buka .laci {
+  grid-template-rows: 1fr;
+}
+
+.isi-laci {
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #9e5b09;
+  color: #fff;
+  border: 0 solid #d37a0e;
+  border-radius: 0 0 12px 12px;
+  padding: 0 20px;
+  transition: padding 0.4s ease;
+}
+.wrapGJ.buka .isi-laci {
+  border-width: 0 5px 5px 5px;
+  padding: 20px;
+}
+
+/* tombol panah: nempel di tepi bawah wrapper, jadi ikut turun */
+.tombol-laci {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 40px;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 60px;
+  height: 30px;
   background: #d37a0e;
-  border: none;
-  border-radius: 0 0 25px 25px; /* Lengkungan di bawah */
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  transition: top 0.4s ease;    /* Animasi saat pindah posisi */
-}
-
-/* Posisi Awal: Menempel di bawah KotakGJ (KotakGJ tingginya 300px) */
-.tombol-panah {
-  top: 295px;                   /* Sedikit naik agar menempel */
-}
-
-/* Saat Terbuka: Pindah ke bawah Kotak Baru */
-.tombol-panah.terbuka {
-  top: 490px;                   /* 295px + tinggi kotak baru (kurang lebih 195px) */
-}
-
-.panah {
-  font-size: 1.2rem;
   color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.panah-laci {
+  display: inline-block;
   transition: transform 0.4s ease;
 }
-
-/* Saat terbuka, panah berputar ke atas */
-.tombol-panah.terbuka .panah {
+.wrapGJ.buka .panah-laci {
   transform: rotate(180deg);
 }
+
 /*Kotak 1 awal*/
 
 
