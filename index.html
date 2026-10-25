@@ -158,9 +158,9 @@
     <div class="isi1">
       <h3>Project</h3>
     </div>
-          <div class="wrapper-laci">
+    <div class="wrapper-laci">
 
-      <!-- KotakGJ asli, tidak diubah sama sekali -->
+      <!-- KotakGJ (TIDAK DIUBAH) -->
       <div class="KotakGJ">
         <div class="backgroundgambar"></div>
         <img src="https:png" alt="GJ" class="GJ">
@@ -170,20 +170,23 @@
         </div>
       </div>
 
-      <!-- Kotak baru: di bawah KotakGJ, awalnya tinggi 0 -->
-      <div class="kotak-laci" id="kotakLaci">
-        <div class="isi-laci">
+      <!-- Grup Laci (Kotak Baru + Tombol) -->
+      <div class="grup-laci">
+
+        <!-- Tombol Panah: Ditaruh paling atas agar menempel di bawah KotakGJ -->
+        <button class="tombol-panah" onclick="toggleLaci()">
+          <div class="segitiga-atas"></div>
+          <span class="panah">▼</span>
+        </button>
+
+        <!-- Kotak Baru -->
+        <div class="kotak-baru" id="kotakBaru">
           <p>Isi kotak baru. Bisa teks, gambar, atau apa saja.</p>
         </div>
 
-        <!-- Panah di dalam kotak baru, di paling bawah -->
-        <button class="tombol-panah" onclick="toggleLaci()">
-          <span class="panah">▼</span>
-        </button>
       </div>
 
     </div>
-    
 
   </section>
   <!--Page 3 akhir-->
@@ -291,9 +294,12 @@
 
   <script>
     //laci 1 awal
-    function toggleLaci() {
-      const laci = document.getElementById('kotakLaci');
-      laci.classList.toggle('terbuka');
+     function toggleLaci() {
+      const tombol = document.querySelector('.tombol-panah');
+      const kotak = document.getElementById('kotakBaru');
+
+      tombol.classList.toggle('terbuka');
+      kotak.classList.toggle('terbuka');
     }
     //laci 1 akhir
   </script>
