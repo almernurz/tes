@@ -169,13 +169,12 @@
         <p class="bawah">Game Jam Internal PENS 2026</p>
       </div>
      
-      <button class="tombol-laci" onclick="toggleLaci()">
-        <span class="panah-laci">▼</span>
+      <button class="tombol-panah" onclick="toggleKotakBaru()">
+        <span class="panah">▼</span>
       </button>
 
-    
-      <div class="laci" id="laci">
-       <p>Isi laci. Bisa teks, gambar, atau apa saja.</p>
+      <div class="kotak-baru" id="kotakBaru">
+       <p>Isi kotak baru. Bisa teks, gambar, atau apa saja.</p>
       </div>
     </div>
 
@@ -285,9 +284,12 @@
 
   <script>
     //laci 1 awal
-    function toggleLaci() {
-      const kotak = document.querySelector('.KotakGJ');
-      kotak.classList.toggle('terbuka');
+    function toggleKotakBaru() {
+      const tombol = document.querySelector('.tombol-panah');
+      const kotakBaru = document.getElementById('kotakBaru');
+
+      tombol.classList.toggle('terbuka');
+      kotakBaru.classList.toggle('terbuka');
     }
     //laci 1 akhir
   </script>
