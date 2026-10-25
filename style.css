@@ -620,7 +620,7 @@ body {
 
 /*Kotak 1 awal*/
 .KotakGJ {
-  display: flex;               
+  display: flex;               /* // WAJIB: supaya isiGJ di samping gambar */
   align-items: center;
   position: relative;
   width: 1200px;
@@ -637,18 +637,22 @@ body {
   overflow: hidden;
 }
 
-
+/* ===== TOMBOL PANAH DI DALAM KotakGJ ===== */
 .tombol-panah {
-  display: block;
-  margin: 0 auto;             
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #d37a0e;
   border: none;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
-  transition: transform 0.3s ease;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .panah {
@@ -662,10 +666,10 @@ body {
   transform: rotate(180deg);
 }
 
-
+/* ===== KOTAK BARU DI BAWAH KotakGJ ===== */
 .kotak-baru {
-  width: 1200px;                
-  max-height: 0;               
+  width: 1200px;
+  max-height: 0;
   overflow: hidden;
   margin: 0 auto;
   background: #9e5b09;
@@ -675,13 +679,10 @@ body {
   box-shadow: 0 0px 60px rgba(208, 123, 4, 0.9);
   transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
   padding: 0 30px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
-
 .kotak-baru.terbuka {
-  max-height: 500px;            
+  max-height: 500px;
   padding: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
