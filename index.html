@@ -158,30 +158,32 @@
     <div class="isi1">
       <h3>Project</h3>
     </div>
-        <!-- WRAPPER: membungkus KotakGJ + laci + panah -->
-    <div class="wrapper-laci">
+        <div class="wrapper-laci">
 
-      <!-- KotakGJ asli, tidak diubah -->
       <div class="KotakGJ">
         <div class="backgroundgambar"></div>
         <img src="https:png" alt="GJ" class="GJ">
         <div class="isiGJ">
-          <p class="atas">asdafsag</p>
-          <p class="bawah">adsc</p>
+          <p class="atas">asd</p>
+          <p class="bawah">asd</p>
         </div>
       </div>
 
-      <!-- Laci: kotak baru yang muncul dari bawah -->
-      <div class="kotak-laci" id="kotakLaci">
-        <p>Isi kotak baru. Bisa teks, gambar, atau apa saja.</p>
+      <div class="grup-laci" id="grupLaci">
+
+        <div class="kotak-laci">
+          <p>Isi kotak baru. Bisa teks, gambar, atau apa saja.</p>
+        </div>
+
+
+        <button class="tombol-panah" onclick="toggleLaci()">
+          <span class="panah">▼</span>
+        </button>
+
       </div>
 
-      <!-- Tombol panah: di bawah laci -->
-      <button class="tombol-panah" onclick="toggleLaci()">
-        <span class="panah">▼</span>
-      </button>
-
     </div>
+    
 
   </section>
   <!--Page 3 akhir-->
@@ -290,11 +292,8 @@
   <script>
     //laci 1 awal
     function toggleLaci() {
-      const tombol = document.querySelector('.tombol-panah');
-      const laci = document.getElementById('kotakLaci');
-
-      tombol.classList.toggle('terbuka');
-      laci.classList.toggle('terbuka');
+      const grup = document.getElementById('grupLaci');
+      grup.classList.toggle('terbuka');
     }
     //laci 1 akhir
   </script>
